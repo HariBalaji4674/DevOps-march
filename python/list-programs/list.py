@@ -67,7 +67,36 @@ for i in l1[1:3]:
   print(i)
 
 # Convert List to Dictionary
+dict1 = dict(zip(l1,l2))
+print(dict1)
+
+# Inverted Dictionary
+d1 = {v:k for (k,v) in dict1.items()}
+print(d1)
 
 
+# Power for each number in list convert them into mapping elements like dictionary
 
+d1 = {i:i**2 for i in l1 if i%2 == 0}
+print(d1)
+
+
+# Largest Element in the list
+
+def largest(l):
+  if not l:
+    return None
+  else:
+    res = l[0]
+    for i in range(1,len(l)):
+      if l[i]>res :
+        res = l[i]
+    return res
+
+# l2 = []
+print(largest(l1))
+
+# List to dictionary
+dict1 = { x:y for (x,y) in (l1,l2) }
+print(dict1)
 
