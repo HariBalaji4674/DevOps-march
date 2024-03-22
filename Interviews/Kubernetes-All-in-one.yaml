@@ -513,19 +513,16 @@ empty directory is a kubernetes ephemeral volume used in side car patterns
 we will mount the volume to main container and side car containers so that they can share the storage among them
 When main container write the logs the side car container will access those logs and ship to ELK
 
-
 FileBeat:
 FileBeat is the Lightweight Shipper for forwarding and centralizing the log data.
 Installed as Agent in Servers
-
 Monitors for log files or locations where you specify collects the logs and events created by the applications
-
 Then it will Forward to Elastic Search or Logstash for Indexing
 
 File Beat should have some config :
 Elastic Search Address > Where to ship
 It needs what are the file to ship
-we need to provide this thriugh the configuration (Configmap)
+we need to provide this through the configuration (Configmap)
 
 HostPath: It is a file loader which has the access to the all the logs file in the root user
 Host Path will have only administrator access
@@ -544,21 +541,19 @@ Fluentd: shipper that all host level server and container level log files to ELK
 HostPath: restrict access for specific directory
 
 Static Provisioning:
-Hard Disk: Sits next to the computer stores fiels in hard disk
+Hard Disk: Sits next to the computer stores fields in hard disk
 EBS --> Elastic Block Storage
 Create One EBS Volumes give access to eks clusters
 EKS Pods will store data in EBS Volumes
-
 now pods or servers may be deleted but your data is not deleted we can mount again same data to the another pod
 
 Persistent Volume: This is Representation of underlying storage
 An object is used to access the storage from cloud or data bases is called Persistent Volume
 
 Persistent Volume Claim:
-This is using storage from PV and attaching that to Pod
-
+This is using storage from PV and attaching that to Pod.
 EBS Static Provisioning
-Create is EBS Disk
+Create an EBS Disk
 Use PV and Attach it to Pod using Volume and Voulme Mounts
 
 Storage Class: Dynamic Provisioning class where all the files should be stored
@@ -583,7 +578,7 @@ Creation of disks/volumes can be handled by kubernetes
 StorageClass > disks & PV > Admin activity
 
 StateFull Set :
-Stat full Set will follow orderly to create the pods/containers
+State full Set will follow orderly to create the pods/containers
 State full set will create the db related applications
 Network identity is important StateFull set will preserve network identity
 
@@ -591,7 +586,7 @@ Network identity is important StateFull set will preserve network identity
 why headless service for statefull set:
 1. Deployment and Attach to the service
 Round Robbin Algorithm is used in load balancer to send the request
-2. In StateFull set we need to explicitly mention clusterip is none
+2. In Headless set we need to explicitly mention clusterip is none
 
 Default DNS/Service : mysql.default.svc.cluster.local
 
@@ -613,7 +608,6 @@ we need to explicitly Mention Cluster ip should be none in HeadLess Service
 We need To mention below field in Deployment no need in Statefulset:
 subdomain: as name as Headless service name
 hostname: pod name
-
 
 % Storage Classes Definitions
 
@@ -696,7 +690,6 @@ Jenkins --> To deploy the applications in K8s
 
 Kubernetes Roles/Cluster Roles
 Role Binding and Cluster Role Binding
-
 
 Custom Resource Definitions:
 CRD Custom Resource Definition

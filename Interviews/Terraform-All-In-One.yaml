@@ -107,6 +107,7 @@ What is Terraform D:
 
 What is the purpose of Null Resources:
   A standard resource library is implemented by null resources but no further action is done
+  A Null resources will not create any kind of resources but it execute some scripts in localmexec and install the external libraries 
 
 Most Common CLI Commands:
 
