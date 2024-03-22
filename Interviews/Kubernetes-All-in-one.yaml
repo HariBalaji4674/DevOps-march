@@ -720,9 +720,7 @@ When the Leader is not available any one by voluntarily can take up the responsi
 
 Principle:
 Quorum: (n/2) + 1
-
 How many Nodes are there: 1 Clusters & 6 Worker Nodes
-
 What Versions are you using: Dev 1.27 & Prod 1.27
 
 How to talk with any cluster and set as default:
@@ -855,7 +853,6 @@ Consider implementing a service mesh like Istio for advanced features such as mu
 
 12: Multi-tenancy Considerations:
 If using multi-tenancy, implement strict isolation between tenants using dedicated namespaces, network policies, and RBAC.
-
 
 Based on The load increase how to increase:
 1: Based on the threshold we need to deploy
