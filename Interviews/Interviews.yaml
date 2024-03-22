@@ -1,5 +1,4 @@
 Blue-Yonder 1st Round:
-
 1: Kubernetes Architecture
 2: Migrate monolithic to Microservices
 3: Distribute Traffic is ditributed
@@ -13,6 +12,18 @@ Blue-Yonder 1st Round:
 11: What will you do if the traffic is getting increased
 12: Why you need kubernetes not other orchestration tools
 13: What is Secrtes and Config Map
+
+Blue Yonder 2nd Round:
+1: About Pod Affinity & Node Affinity
+2: About Image Pull Policy
+3: Taints and Tolerations
+4: How to Divide the multiple Namespaces
+5: About Annotations
+6: About Secrets
+7: About Pod Lifecycle and Status
+8: How to ship Logs in Kubernetes
+9: About Resource limits and requests
+10: 
 
 Cloud Defence AI:
 1: Introduction
@@ -32,8 +43,6 @@ Comcast Interview :
 4: About Go Scripting
 5: On which environment you will be working DEV,QA,PROD etc..
 6: What are your Day to Day Activities in Current Role
-
-
 
 Extra:
 1: Synchronous and Asynchronous Services
