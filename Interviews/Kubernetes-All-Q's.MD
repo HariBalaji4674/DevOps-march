@@ -126,122 +126,156 @@ d: Daemon-Set Controller
 - 2: Kube-Proxy: a component which enables the communication between each container in the Cluster
 - 3: Container Run time: A component which is responsible for Running the Containers
 
+# Kubernetes Objects
 
-What are Kubernetes Objects:
-Kubernetes objects are persistent entities in the Kubernetes system.
-Kubernetes uses these entities to represent the state of your cluster
+Kubernetes objects are persistent entities in the Kubernetes system. They represent the state of your cluster.
 
-How to verify the user and Access to the clusters:
-There are two sides in the kubernetes:
+## Verification of User Access to Clusters:
 
-1: Client Side
-1: Validation
-2: Format checking
-3: misconfiguration (Rest Api Calls)
-4: Authentication data need to pass which is saved in config file
+### Client Side:
+1. Validation: Checks the syntax and structure of the configuration.
+2. Format checking: Ensures the configuration follows the correct format.
+3. Misconfiguration Detection: Identifies any misconfigurations in REST API calls.
+4. Authentication Data: Passes authentication data saved in the configuration file.
 
-2: Server Side: API Server Send the request to Config and validate
-1: Authorization
-2: Authentication
+### Server Side:
+1. Authorization: Determines whether the user has permissions to perform the requested action.
+2. Authentication: Validates the user's identity.
 
-Server side Field Verification:
-1: Strict
-2: Warn
-3: Ignore
+### Server Side Field Verification:
+1. Strict: Enforces strict validation rules and rejects invalid requests.
+2. Warn: Issues warnings for invalid requests but allows them to proceed.
+3. Ignore: Ignores invalid requests without issuing warnings or rejecting them.
 
-#Docker Swarm vs Kubernetes
-Kubernetes supporting is better networking ,but Docker swarm is supporting minimal networking
-Kubernetes is a container orchestration system that manages multiple containers.
-Docker Swarm does not manage any containers but instead is a cluster manager for Docker containers.
-Kubernetes also has builtin support for stateful applications, whereas Docker Swarm does not.
+# Docker Swarm vs Kubernetes
 
-# K8s Production Systems:
-# What is Kubernetes Distributions?
-Distributions will provide support
-Popular Systems: Top To Bottom
-Kubernetes Cluster
-OpenShift
-Rancher
-VMWars Tanzu
-EKS
-AKS
-GKE.
-| How DevOps Engineers Manage 100s of Clusters?
-Kops
-Kubeadm
+- Kubernetes:
+  - Better networking support.
+  - Container orchestration system managing multiple containers.
+  - Built-in support for stateful applications.
 
-Container Images:
-A Container Image represents binary data that encapsulates an application and all its dependencies
-Images are executable software bundles and that can run standalone and make very well define about assumptions about their run time
+- Docker Swarm:
+  - Minimal networking support.
+  - Cluster manager for Docker containers.
 
-Image names
-Default imagePullPolicy is set as #ifNotPresent
-imagePullPolicy
-IfNotPresent
-Always
-Never
+# Kubernetes Production Systems:
 
-kubelet will download and fetch the images from the registry
-to use the same version of image replace <image:tag> with <image@digest>
+## Kubernetes Distributions:
 
-% Types of Patterns/Multi-Containers Pods in K8s:
+- Provide support for Kubernetes clusters.
+- Popular systems include:
+  - Kubernetes Cluster
+  - OpenShift
+  - Rancher
+  - VMWars Tanzu
+  - EKS
+  - AKS
+  - GKE.
 
-Side Car Pattern/Container : Useful for Logging Utilities, Sync Services, Watchers, Monitoring Agents
-application containers: Main Application Containers
-init containers: Starts to set up the config files ,downloading data etc..
-helper containers: Data Migrations, Backups, Maintenance activities.
-builder containers: are used to building and packaging the applications
-proxy containers: Intermediaries between containers and external services
-Ephemeral Containers:
-When there is no utilities like curl
-we need to interact with main application debugging
-we need a containers like Ephemeral Containers
-Adapter Containers: They take an Input and Change the output and Give to another format
+## How DevOps Engineers Manage 100s of Clusters?
 
-% ImagePullPolicy:
-set image field as image@digest == #imgae:IfnotPresent
-set image field as image;latest ==  # image : always
-image field as latest == always
-image field as nothing == ifnotPresent
+- Tools like:
+  - Kops
+  - Kubeadm
 
-Images issues:
+# Container Images:
 
-ImagePullBackOff
-kubelet starts creating a container for a pod using the container run time
-container are in waiting state because of imagepullbackoff
-kubernetes could not pull the images due to several reasons
-invalid image name
-pulling the image from private registry without pull secrets
-backoff part indicates that kubernetes will try to pull the image with an increasing backoff delay
-5 minutes (impiled in limit)
+- A container image encapsulates an application and all its dependencies.
+- Images are executable software bundles and can run standalone.
+- They make well-defined assumptions about their runtime.
 
-Serial and parallel image pulls:
-each pod will pull images in serial order
-each node can pull images in parallel order
-in kubelet configuration set serializeImagePulls to false to get images parallel
+- `kubelet` downloads and fetches images from the registry.
+- To ensure using the same version of an image, replace `<image:tag>` with `<image@digest>`.
 
-/etc/cfc/kubelet/kubeletserviceconfig
+## % Types of Patterns/Multi-Containers Pods in K8s:
 
-Kubernetes Have namespace level and Non Namespace Level
+### Sidecar Pattern/Container:
 
-Kubernetes NameSpaces:
-Isolated Project Spaces
-In Kubernetes, namespaces provides a mechanism for isolating groups of resources within a single cluster.
-Names of resources need to be unique within a namespace, but not across namespaces.
-Namespacebased scoping is applicable only for namespaced objects (e.g. Deployments, Services,Pods etc) and not for clusterwide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc)
+- Useful for:
+  - Logging utilities
+  - Sync services
+  - Watchers
+  - Monitoring agents
 
-Kubernetes Pods:
+### Application Containers:
 
-What are Pods:
-A Pod (as in a pod of whales or pea pod) is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
-pod is a Basically a wrapper like yaml file with all commands need to run the container
-Pod is a smallest Deployable unit which contains one or more container specifications
-Pod can share both network and storage with multiple containers
+- Main application containers.
 
-namespace
-image names and container specifications
+### Init Containers:
 
-# Pod Template
+- Starts to set up the configuration files, downloading data, etc.
+
+### Helper Containers:
+
+- Used for:
+  - Data migrations
+  - Backups
+  - Maintenance activities
+
+### Builder Containers:
+
+- Used for building and packaging applications.
+
+### Proxy Containers:
+
+- Act as intermediaries between containers and external services.
+
+### Ephemeral Containers:
+
+- Used when utilities like curl are not available.
+- Needed for interacting with the main application for debugging purposes.
+
+### Adapter Containers:
+
+- Take an input, change the output, and provide it in another format.
+
+### ImagePullPolicy:
+- Default imagePullPolicy is set as #ifNotPresent
+- `IfNotPresent`: Pull the image only if it is not already present locally.
+  - Set the image field as `image@digest == #imgae:IfnotPresent`.
+- `Always`: Always pull the latest version of the image.
+  - Set the image field as `image:latest == #image:always` or just `image:latest`.
+- `Never`: Never pull the image, even if it is not present locally.
+  - Set the image field as `image:nothing == ifnotPresent`.
+
+## Images issues:
+
+### ImagePullBackOff
+
+- When the kubelet starts creating a container for a pod using the container runtime, the container enters a waiting state due to ImagePullBackOff.
+- Kubernetes could not pull the images due to several reasons:
+  - Invalid image name.
+  - Pulling the image from a private registry without pull secrets.
+- The "backoff" part indicates that Kubernetes will try to pull the image with an increasing backoff delay, typically 5 minutes (implied in limit).
+
+### Serial and Parallel Image Pulls
+
+- Each pod will pull images in serial order.
+- Each node can pull images in parallel order.
+- In kubelet configuration, set `serializeImagePulls` to false to allow parallel image pulls.
+
+### Kubernetes Namespaces
+
+- Kubernetes has namespace-level and non-namespace-level isolation.
+- Namespaces are isolated project spaces in Kubernetes.
+- Namespaces provide a mechanism for isolating groups of resources within a single cluster.
+- Names of resources need to be unique within a namespace, but not across namespaces.
+- Namespace-based scoping is applicable only for namespaced objects (e.g., Deployments, Services, Pods, etc.) and not for cluster-wide objects (e.g., StorageClass, Nodes, PersistentVolumes, etc.).
+
+### Kubernetes Pods
+
+#### What are Pods:
+
+- A Pod (as in a pod of whales or pea pod) is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
+- Pod is basically a wrapper like YAML file with all commands needed to run the container.
+- Pod is the smallest deployable unit which contains one or more container specifications.
+- Pod can share both network and storage with multiple containers.
+
+#### Components of a Pod:
+- Namespace
+- Image names and container specification
+
+### Pod Template
 apiVersion: v1
 kind: Pod
 metadata:
@@ -255,53 +289,59 @@ spec:
       ports:
       - containerPorts: 80
 
-Why Pod will finishes its execution :
-1: The pod object has been deleted
-2: The pod is evicted for lack of resources or the node fails
+### Reasons for Pod Termination:
 
-Pods in kubernetes uses Two main ways:
-pods with single container
-pods with multiple container
+1. The pod object has been deleted.
+2. The pod is evicted due to lack of resources or the node fails.
 
-What are init containers:
-containers which will start the actual containers are started
-init containers always run to completion
-init container complete successfully before another one starts
+### Pod Configurations:
 
-Pod LifeCycle:
-Pending
-Running
-Succeeded
-Failed
-Unknown
+Pods in Kubernetes can be configured in two main ways:
+- Pods with a single container.
+- Pods with multiple containers.
 
-Container States:
-Waiting
-Running
-Terminated
+### Init Containers:
 
-Pod Conditions:
-PodScheduled
-PodreadyToStartContainers
-ContainersReady
-Initialized
-Ready
+Init containers are containers that start before the actual containers are started.
+- Init containers always run to completion.
+- Each init container must complete successfully before the next one starts.
 
-Probes in Kubernetes: (HealthChecks in Kubernetes that pods are running smoothly )
-readiness probe
-let us know the container is ready to serve the requests
+### Pod LifeCycle:
 
-livenessprobe
-Container is working properly or not if not it will restarts it when required
+- **Pending:** Pod has been accepted by the Kubernetes system but has not yet been scheduled to a node.
+- **Running:** Pod has been bound to a node, and all its containers have been created and started.
+- **Succeeded:** All containers in the pod have terminated successfully.
+- **Failed:** All containers in the pod have terminated, and at least one container has terminated in failure.
+- **Unknown:** The state of the pod cannot be determined.
 
-3 Types of HealthChecks:
+### Container States:
 
-httpGet: should return a successfull http response
-tcpSocket: port Connectivity should be successfull
-exec: executes a specified command inside the container should return exit value as 0
-grpc: Performs a remote procedure call using gRPC
+- **Waiting:** Container is waiting for some event to occur.
+- **Running:** Container is executing.
+- **Terminated:** Container has terminated, either in success or failure.
 
-# Readinees probe and Liveness Probe yaml file
+### Pod Conditions:
+
+- **PodScheduled:** Pod has been scheduled to a node.
+- **PodreadyToStartContainers:** Pod is ready to start containers.
+- **ContainersReady:** All containers in the pod are ready.
+- **Initialized:** Initialization of the pod has completed.
+- **Ready:** Pod is ready to serve requests.
+
+### Probes in Kubernetes (HealthChecks):
+
+- **readiness probe:** Indicates whether the container is ready to serve requests.
+
+- **liveness probe:** Checks if the container is working properly; if not, it will be restarted when required.
+
+### 3 Types of HealthChecks:
+
+1. **httpGet:** Should return a successful HTTP response.
+2. **tcpSocket:** Port connectivity should be successful.
+3. **exec:** Executes a specified command inside the container; should return an exit value of 0.
+4. **grpc:** Performs a remote procedure call using gRPC.
+
+### Readinees probe and Liveness Probe yaml file
 
 apiVersion: v1
 kind: Pod
@@ -326,152 +366,110 @@ spec:
       initialDelaySeconds: 15
       periodSeconds: 10
 
-Why is Pod Yaml Files is needed:
-To bring the Declarative Capabilities for the docker commands.
-Yaml > Pod Deployment > Example
-Pod is a one or group of containers
+## Why Pod YAML Files are Needed:
+- To bring the Declarative Capabilities for the docker commands.
+- Yaml > Pod Deployment > Example
+- Pod is a single or group of containers.
 
-what is kubectl :
-It is just a command to run or operate the containers to run or manage like docker cli
+## What is `kubectl`:
+- It is a command-line tool to run or operate containers to run or manage like the docker CLI.
 
-Kubernetes Deployments:
+## Kubernetes Deployments:
+### Deployment vs ReplicaSet vs Pod vs Container
+- **Container:** Docker; lightweight in nature for running the application with all application-related packages and dependencies along with minimal OS usage.
+- **ReplicaSet:** Maintains the desired number of pods/run the containers inside the pod for high availability.
+- **Deployment:** Developed to update anything in the pods, including configuration files, by developing a Deployment set manifest file.
 
-Deployment vs ReplicaSet vs Pod vs Container
+## In Kubernetes Environment:
+- **Master/Cluster:**
+  - After Successful Minikube Installation, check the Files are there or not (`ls -l > kubeconfig, kubeconfig_ip`).
+  - Then create a .kube directory (`mkdir .kube`), and copy kubeconfig as config to the .kube directory.
+- **Worker Node(WorkStation):**
+  - Checking The log files for Installation: `tail -f /var/log/cloudinitoutput.log`.
+  - Install `kubectl` in Worker Node, create `.kube` directory (`mkdir .kube`), then add authentication to the `.kube` config file.
 
-Container > Docker > Light weight in nature for running the application with all application related packages and dependencies along with the minimum os usage is called Container.
+## Everything in Kubernetes is Resources:
+- Create a Resource within the Workstation.
 
-In Master/Cluster:
-After Successfull Minikube Installation of Check the Files are there or not
-ls l > kubeconfig ,kubeconfig_ip will be there
-then create one .kube directory > mkdir .kube
-then copy kubeconfig as config to .kube directory
+## Commands for Namespaces:
+- `kubectl get pods`
+- `kubectl create -f <namespacefilename>`: When the resource does not exist, this will create the namespace.
+- `kubectl apply -f <namespacefilename>`: When resources do not exist, this will create the resource and if exists, it will update the resource.
+- `kubectl get namespaces`
 
-In Worker Node(WorkStation)
+## Labels:
+- Labels are key-value pairs that are attached to pods.
+- No special characters should be used as key values in labels.
+- Keys can have multiple values, but values should be unique.
+- Labels are key-value pairs with some functionalities and help to filter the pod.
+- Labels are intended to specify identifying attributes that are relevant to users and objects, but they do not directly imply semantics to the core system of pods.
+- Labels are used in selectors that help to filter some functionalities.
+- Labels cannot have special characters in key names, whereas annotations can have.
+- Labels have some length restrictions, whereas annotations' length can be more than labels'.
+- Labels are used in Kubernetes resources selectors.
+- Annotations are used in selecting external resources.
 
-Checking The log files for Installation :
-tail f /var/log/cloudinitoutput.log
+## Annotations:
+- Annotations are attached to the pods as arbitrary non-identifying objects.
+- Annotations are similar to labels, but they have some differences:
+  - Labels have a fixed (minimal length) length, whereas annotations do not have a fixed length.
+  - Annotations can use special characters inside keys and values.
+  - Annotations can contain links as values to download resources, which is not possible with labels.
 
-Install Kubectl in Worker Node
-Create .kube > mkdir .kube
-then add authentication to the .kube config file
+## Resources:
+- **Requests:** Soft Set
+- **Limits:** Hard Set
 
-mkdir .kube
-cd .kube
-vim config
+## ConfigMap:
+- Stores configurations related to the application as passed as data stored as key-value pairs.
 
-EveryThing In Kubernetes is resources
+## Secrets:
+- Stores usernames and passwords securely in the environment variables.
 
-Create a Resource with in the Workstation.
+## Image Pull Policy:
+- Affects when the kubelet attempts to pull (download) the specified image.
 
-Commands for NameSpaces:
-kubectl get pods
-kubectl create f <namespacefilename> > When resource not exists this will create the namespcace
-kubectl apply f <namespacefilename> > When resources not exists this will create the resource and if exists it will update the resource
-kubectl get namespaces
+## Kubernetes Services:
+- Enable connectivity between pods and external users.
+- Expose the application to the external world.
+- Three Types of Services in Kubernetes:
+  1. ClusterIP
+  2. NodePort
+  3. LoadBalancer
 
-Labels :
-Labels are keyValue pairs that are attached to pods
-No Special Characters should be used as key values in labels
-Keys can have multiple but values should be unique
-Labels are key value pairs with some functionalities and helps to filtering the pod.
-Labels are attached that intended to do specify identifying the attributes that are relevant to user and objects
-That does not directly imply semantics to the core system of pods
-labels are used in selectors that will hel to filter some functionalities.
-labels can't have special characters in key names, annotations can have
-labels key have some length restrictions, annotations length can be more than labels
-labels are used in kubernetes resources selectors
-Annotations are used in selecting external resources.
+### ClusterIP:
+- Exposed only to ClusterIP (Inside the Kubernetes by kubeproxy).
 
-Annotations:
-Annotations are attached to the pods as arbitrary non identifying objects.
+### NodePort:
+- Connects to all nodes equally.
 
-Annotations are also same like labels but labels have fixed( Minimal Length ) length but annotations cannot have fixed length in Annotations we can use links as values to download the resources but not in labels
-Annotations can use special characters inside keys and values
+### LoadBalancer:
+- Distributes load based on incoming requests.
 
-Resources:
-Requests > Soft Set
-Limits > Hard Set
+## Ingress in Kubernetes:
+- Proxy In On-Premise Service.
+- Load Balancers in Cloud:
+  1. Application Load Balancers.
+  2. Network Load Balancers.
 
-ConfigMap > The Configurations related to Application as passed as data stored as key value pair.
+## Service vs Ingress
 
-Secrets > The Storing of username and password and apis in a base64 encoded version
+### Sets:
+To deploy an application, we need to make a set of pods because there should be no manual intervention to create multiple containers when the user requests heavily to the application. There are 4 Types of SETS Available:
 
-Image Pull Policy:
-The imagePullPolicy for a container and the tag of the image affect when the kubelet attempts to pull (download) the specified image.
-
-Kubernetes Environment: gives the environment variable
-Resources Management: resources > Like CPU,RAM,Memory,etc..
-
-ConfigMap: To Set the configurations to the kubernetes environment
-
-A ConfigMap is an API object used to store nonconfidential data in key value pairs. Pods can consume ConfigMaps as environment variables, command line arguments, or as configuration files in a volume.
-
-Secrets: To store username and passwords securely in the environment variables
-
-Kubernetes Services: Services enable connectivity between pods and external users
-
-To access the pods from internet we need some kind of services to expose
-Service is a method of exposing the application to the external world
-
-There are 3 Types of Services in Kubernetes :
-ClusterIP
-NodePort
-LoadBalancer > Only For Cloud Related Containers
-
-ClusterIP:
-The pod which is exposed to get the ip address for the pod is called ClusterIP
-It is Exposed to only ClusterIP (Inside the kubernetes by kubeproxy)
-To Expose your application to world
-Service Mesh > The IP Address for the cluster IP is changed every time but the name of the clusterip will not change that name is called Service Mesh.
-To Balance the load > Deployment and ReplicaSet
-Target Port is the Container Port where we have specified in the Pod spec
-kubectl get services
-
-Pod Port: target port
-Port: Service Port
-NodePort: Node Port (30,000 to 32767)
-
-NodePort:
-One Port number for all the Nodes and creates cluster ip which is connected with all three node ports
-NodePort is the next level for ClusterIP
-In Node Port the cluster will connect with the nodes equally to each when the user hits the ip the ip will make to connect one node then that node request api call will go to the cluster ip where the port is connected
-User > NodePort > Node 1/Node 2/Node 3 > ClusterIP > Pod > Containers
-
-LoadBalancer:
-where the load is distributed based on the traffic incoming requests
-user > Route53 > LoadBalancer > Nodes (1 etc..) > ClusterIP > Pods > Containers
-
-Ingress in Kubernetes:
-Proxy In On-Premise Service
-Load Balancers in Cloud
-1: Application Load Balancers
-2: Network LoadBalancers
-
-| Service vs Ingress
-
-Sets: To deploy an application we need to make the set of pods because there is no manual intervention should happen to create the multiple containers when the user request has received heavily to the application
-There are 4 Types of SETS Available:
 1) ReplicaSet
 2) Deployment
 3) Daemon Set
 4) Stateful Set
 
-ReplicaSet:
-ReplicaSet is the maintainer of the file to create pods/ run the containers inside the pod atleast one for the high availability
+#### ReplicaSet:
+ReplicaSet is responsible for maintaining the desired number of pods/run the containers inside the pod for high availability. When we delete the pod, the ReplicaSet will automatically create a new pod for high availability. However, once a pod is created with ReplicaSet, if we change the image or configuration/volumes for the container and rebuild the pod, it will not update anything. This is a disadvantage for ReplicaSet. Hence, Deployment was developed.
 
-when we delete the pod the replica set will create the pod automatically for high availability
+#### Deployment Set:
+If we need to update anything in the pods, including configuration files, we need to develop a Deployment set manifest file.
 
-Once Pod is created with ReplicaSet if we change the image or configuration / volumes for the container if we build again pod it will not update anything
-
-once the pod created with ReplicaSet we cannot update
-
-this is disadvantage for ReplicaSet > Hence we Developed Deployment
-
-Deployment Set:
-if we need to update anything in the pods even configuration files also we need to develop deployment set manifest file
-
-Objects in Kubernetes: There are 11 Types of Objects in Kubernetes:
-https://kodekloud.com/blog/kubernetesobjects/#11typesofobjectsinkubernetes
+### Objects in Kubernetes:
+There are 11 Types of Objects in Kubernetes:
 
 1. Pods
 2. Deployment
@@ -485,374 +483,278 @@ https://kodekloud.com/blog/kubernetesobjects/#11typesofobjectsinkubernetes
 10. Secrets
 11. Job
 
+[More about Kubernetes Objects](https://kodekloud.com/blog/kubernetesobjects/#11typesofobjectsinkubernetes)
 
-Storage System/Services in Kubernetes:
+## Storage System/Services in Kubernetes:
 
-% Volume is Simple concept :
-1: Create Volume
-2: Mount That created volume
+### % Volume is a Simple Concept:
+1. Create Volume
+2. Mount That created volume
 
-Every pod has some storage to store in the container space but it will not save the logs/data for long time
-When the Pod/Container is died then the logs/data will be lost so to save the data we need the storage system
+Every pod has some storage to store in the container space but it will not save the logs/data for a long time. When the Pod/Container is died then the logs/data will be lost so to save the data we need the storage system.
 
-There are Different Storage system for Containers:
-1) EBS > Elastic Block Storage
-2) EFS/NFS > Elastic File System/System Service
+There are Different Storage systems for Containers:
+1. EBS (Elastic Block Storage)
+2. EFS/NFS (Elastic File System/System Service)
 
-There are 4 Types of Storage system for container :
-1) emptyDir
-2) Hostpath
-3) Static Provision > External,permanent,EBS
-4) Dynamic Provisioning > External, Permanent,EFS
+There are 4 Types of Storage systems for containers:
+1. emptyDir
+2. Hostpath
+3. Static Provisioning (External, Permanent, EBS)
+4. Dynamic Provisioning (External, Permanent, EFS)
 
-emptyDir > Ephimeral,inside pod
-Hostpath> Ephimeral ,Inside Server
+- **emptyDir**: Ephimeral, inside pod. Used in side car patterns. Main container writes the logs, the side car container accesses those logs and ships to ELK.
 
-emptyDir:
-empty directory is a kubernetes ephemeral volume used in side car patterns
-we will mount the volume to main container and side car containers so that they can share the storage among them
-When main container write the logs the side car container will access those logs and ship to ELK
+- **HostPath**: Ephimeral, inside Server. It has full root access and is not a recommended approach.
 
-FileBeat:
-FileBeat is the Lightweight Shipper for forwarding and centralizing the log data.
-Installed as Agent in Servers
-Monitors for log files or locations where you specify collects the logs and events created by the applications
-Then it will Forward to Elastic Search or Logstash for Indexing
+#### FileBeat:
+- Lightweight Shipper for forwarding and centralizing the log data.
+- Installed as an agent in servers.
+- Monitors log files or locations specified and forwards logs and events to Elasticsearch or Logstash for Indexing.
+- FileBeat should have some configuration:
+  - Elastic Search Address: Where to ship.
+  - List of files to ship, provided through configuration (Configmap).
 
-File Beat should have some config :
-Elastic Search Address > Where to ship
-It needs what are the file to ship
-we need to provide this through the configuration (Configmap)
+#### DaemonSet:
+- Ensures that at least one pod should be delivered to each and every node.
+- Used for shipping server logs.
+- Hostpath access: has full root access, not a recommended approach.
 
-HostPath: It is a file loader which has the access to the all the logs file in the root user
-Host Path will have only administrator access
+#### Fluentd:
+- Shipper that ships all host-level server and container-level log files to ELK (Elasticsearch, Logstash, and Kibana).
+- HostPath: restricts access to a specific directory.
 
-it contains 3 types:
-1: DaemonSet
-2: Fluentd
-3: storage class
+#### Static Provisioning:
+- Hard Disk: sits next to the computer, stores fields in hard disk.
+- EBS: Elastic Block Storage.
+- Create EBS Volumes, give access to EKS clusters, store data in EBS Volumes. Data remains even if pods or servers are deleted, can be mounted again to another pod.
 
-Daemon Set : which should make sure that atleast one pod should be delivered to each and every nodes
-Advantage of using DaemonSet is shipping the server logs
-Hostpath access it has full root access it is not a recommended approach
+#### Dynamic Provisioning:
+- Creation of disks/volumes handled by Kubernetes.
+- StorageClass: dynamically provisions disks & PV, admin activity.
 
-Fluentd: shipper that all host level server and container level log files to ELK elastic logic search and kibana
+#### StatefulSet:
+- Follows orderly creation of pods/containers.
+- Preserves network identity.
+- Headless Service for StatefulSet:
+  - In Headless set, explicitly mention `clusterIP` as none.
 
-HostPath: restrict access for specific directory
+#### Storage Classes Definitions:
+- Storage class used for Dynamic Provisioning.
+- PV: Representation of external storage.
+- PVC: A claim that can mount the volume.
+- EBS: Elastic Block Storage.
+- EFS: Elastic File System.
 
-Static Provisioning:
-Hard Disk: Sits next to the computer stores fields in hard disk
-EBS --> Elastic Block Storage
-Create One EBS Volumes give access to eks clusters
-EKS Pods will store data in EBS Volumes
-now pods or servers may be deleted but your data is not deleted we can mount again same data to the another pod
+#### StatefulSet and Deployment:
+- StatefulSet for DB-related components, uses Headless service.
+- Deployment for Stateless applications.
+- StatefulSet follows order to create the pods, maintains pod identity, and uses Headless service.
 
-Persistent Volume: This is Representation of underlying storage
-An object is used to access the storage from cloud or data bases is called Persistent Volume
+For DB, EBS is preferred due to low latency and direct attachment to the container.
 
-Persistent Volume Claim:
-This is using storage from PV and attaching that to Pod.
-EBS Static Provisioning
-Create an EBS Disk
-Use PV and Attach it to Pod using Volume and Voulme Mounts
-
-Storage Class: Dynamic Provisioning class where all the files should be stored
-automatically without manual intervention
-
-Fluentd --> a shipper from servers to external systems
-
-Flow of the Creating EBS Volumes: (Manually)
-1: Create EBS Volumes
-2: Install drivers EBS CSI
-3: Give access to worker nodes
-4: create pv
-5: Create PVC
-6: Mounted to Pod
-
-EBS: Elastic Block Storage
-EFS: Elastic Files System
-NFS: Network File System
-
-Dynamic Provisioning:
-Creation of disks/volumes can be handled by kubernetes
-StorageClass > disks & PV > Admin activity
-
-StateFull Set :
-State full Set will follow orderly to create the pods/containers
-State full set will create the db related applications
-Network identity is important StateFull set will preserve network identity
-
-% Headless service for stateful set:
-why headless service for statefull set:
-1. Deployment and Attach to the service
-Round Robbin Algorithm is used in load balancer to send the request
-2. In Headless set we need to explicitly mention clusterip is none
-
-Default DNS/Service : mysql.default.svc.cluster.local
-
-Create a DNS By its own without any Ip address:
-% The should be like below
-pod-name.
-headless-servicename.
-namespace.
-svc.
-cluster domain.
-example.
-
-eg: mysql-0.mysql-h.default.svc.cluster.local
-
-HeadLess Service Means:
-Without accessing pod we will get same dns names
-we need to explicitly Mention Cluster ip should be none in HeadLess Service
-
-We need To mention below field in Deployment no need in Statefulset:
-subdomain: as name as Headless service name
-hostname: pod name
-
-% Storage Classes Definitions
-
-Storage class used for Dynamic Provisioning
-Pv > Representation of external storage
-PVC > A claim that can make to mount the volume
-EBS > Elastic Block Storage
-EFS > Elastic File System
-
-StateFul Set and Deployment:
-StateFull set is for DB related components, StatefulSet will use Headless service
-Deployment is for Stateless applications
-1: Stateful set follow order to create the pods
-2: StatefulSet should have same pod name and identity
-3: Stateful set keeps the pod identity same for th communication
-4: Stateful set it is mandatory to use headless service
-
-For DB we have to use EBS because the Latency will be low with EBS as ebs will be attached to next to the container as it is attached directly it will be stored directly and retrieve back immediately as it is saved in same region
-
-Steps tp Create/Develop StatefullSet Manifest Files:
+### Steps to Create/Develop StatefulSet Manifest Files:
 1. Install CSI Drivers
 2. Give Access to EC2 Servers
-1. Create a Storage Class
-2. Create Persistent Volume
-3. Create Persistent Volume Claim Name as same as Storage Class Name
-4. Attach PVC as volumeMounts name as same as PVC Name
-5. Create a manifest.yaml file
-Create first
+3. Create a Storage Class
+4. Create Persistent Volume
+5. Create Persistent Volume Claim
+6. Attach PVC as volumeMounts
+7. Create a manifest.yaml file
 
-mongodb > 27017
-redis  > 6379
-mySql >3306
-rabbitMq > 5672
+## RBAC: Role based Access Control:
+1. Simple But Complicated; it is directly related to Security
 
-1. Create Storage Class
-2. Create StatefulSet
-1. Create kind: SatetfulSet
-2. Spec:
-3. Create Service
-4. Create ConfigMap
+### RBAC is Divided into 2 Parts: Users and Service Accounts
+- **Users:** By Humans (Users/Admins)
+  - How to create a users in Kubernetes:
+    - OffLoading the User Management to identity to Identity Providers
+    - K8s Does not provide creating users
+    - It gives that responsibility to identity providers
 
-| Helm Charts:
-In Containerization we are doing 2 things
-1. Building image and pushing it to DockerHub
-2. Making Manifest files to run the applications
+### Role and Role Binding:
 
-Manifest> Input latest Version
-Purpose of Helm :
-Parameterize the kubernetes manifest files
-it is kubernetes package manager
-Parameterize Manifest Files:
-Helm Charts:
-apiVerison: Required
-name: required > Name of the chart
-version: chart version > Give the name of the chart version
-description: a meaningful sentence
-appVersion: this is application version
-templates folder: were we keep our manifest files.
+- **Service Accounts:** An account used by any service to interact with Kubernetes Cluster
+  - A service account is a type of non-human account that, in Kubernetes, provides a distinct identity in a Kubernetes cluster.
+  - **Example:**
+    - Monitoring --> Prometheus Service account
+    - Jenkins --> To deploy the applications in K8s
 
-| RBAC: Role based Access Control:
+### Kubernetes Roles/Cluster Roles
+- Role Binding and Cluster Role Binding
 
-1: Simple But Complicated it is directly related to Security
+## Custom Resource Definitions:
+- CRD Custom Resource Definition
+- CR Custom Resource
+- Custom Control
 
-RBAC is Divided into 2 Parts: Users and Service Accounts
-Depending upon the role we control the access
+## Security Related Tool:
+- Kuberno
+- kubeproxy
 
-| Users: By Humans (Users/Admins)
-How to create a users in Kubernetes:
-OffLoading the User Management to identity to Identity Providers
-K8s Does not provide creating users
-It gives that responsibility to identity providers
 
-Role and Role Binding:
+## CRD (Custom Resource Definitions):
+- Defining a new type of API for Kubernetes deployment
+- Extend the capabilities of Kubernetes by extending the API resources
+- Yaml File where we can define:
+  - Gives all the possible options to support a user can Submit in the Virtual Service
+  - Manifests/Helm/Operators/Kustomize.
 
-| Service Accounts: An account used by any service to interact with Kubernetes Cluster
-A service account is a type of non-human account that, in Kubernetes, provides a distinct identity in a Kubernetes cluster.
-#Example:
-Monitoring --> Prometheus Service account
-Jenkins --> To deploy the applications in K8s
+## Why we need Containers and Container Orchestration:
+1. To Increase the efficiency, portability, scalability
+2. Reduce the usage of Operating system dependencies
 
-Kubernetes Roles/Cluster Roles
-Role Binding and Cluster Role Binding
+## K8s Architecture:
+- Nodes/Minions
+- Components:
+  - API-Server
+  - ETCD
+  - Controller Manager
+  - DNS
+  - Scheduler
+  - Kubelet
+  - Kube-Proxy
+  - Container Runtime Interface (containerd)
 
-Custom Resource Definitions:
-CRD Custom Resource Definition
-CR Custom Resource
-Custom Control
+## How To manage Clusters when down:
+- There is a concept like Quorum, which means we need to mention one as leader
+- When the Leader is not available, anyone voluntarily can take up the responsibilities
 
-Security Related Tool:
-Kuberno
-kubeproxy
+## Principles:
+- Quorum: (n/2) + 1
+- Number of Nodes: 1 Cluster & 6 Worker Nodes
+- Versions in Use: Dev 1.27 & Prod 1.27
 
-CRD:
-Defining a new type of API To Kubernetes Deployment
-Extend the capabilities of Kubernetes Extend the API Resources
-Yaml File where what can we define
-Gives all the possible options to support a user can Submit in the Virtual Service
-Manifests/Helm/Operators/Kustomize.
 
-Why we need Containers and Container Orchestration:
-1: To Increase the efficiency, portability,scalability
-2: Reduce the usage of Operating system dependencies
+## How to talk with any cluster and set as default:
+- **Kube-Config file**
+  - Command: `kubectl config view`
+  - **Location:** `.kube/config`
+- **Config File has Three Fields:**
+  1. Clusters: which cluster is using
+  2. Contexts: cluster name
+  3. Users: for which users have the access with
 
-K8s Architecture: Nodes/Minions
-API-Server,ETCD,Controller Manager,DNS,Scheduler,Kubelet,Kube-Proxy,Container Runtime Interface(containerd)
-
-How To manage Clusters when down:
-There is concept like Quorum that means we need to mention on as leader
-When the Leader is not available any one by voluntarily can take up the responsibilities
-
-Principle:
-Quorum: (n/2) + 1
-How many Nodes are there: 1 Clusters & 6 Worker Nodes
-What Versions are you using: Dev 1.27 & Prod 1.27
-
-How to talk with any cluster and set as default:
-Kube-Config file
-kubectl config view
-Location: .kube/config
-Config File has Three Fields:
-1: Clusters: which cluster is using
-2: Contexts: cluster name
-3: Users: for which users have the access with
-
-Deploy Nginx:
+## Deploy Nginx:
+```bash
 kubectl run nginx --image=nginx
 
-How to List of resources/Objects:
+
+## List of resources/Objects:
+```bash
 kubectl api-resources
-Name
-Shortnames
-APIVersion
-Namespaced
-KIND
 
-List Of Objects which you worked on:
-Pod
-ReplicasSet
-Deployment
-StatefulSet
-HeadLess Set
-Daemon Set
-Service
-NodePort
-ClusterIP
-LoadBalancer
-Ingress
+## Fields:
+- Name
+- Shortnames
+- APIVersion
+- Namespaced
+- KIND
 
-How to get the Documentation of Any Objects:
+
+## List Of Objects which you worked on:
+- Pod
+- ReplicaSet
+- Deployment
+- StatefulSet
+- Headless Set
+- Daemon Set
+- Service
+- NodePort
+- ClusterIP
+- LoadBalancer
+- Ingress
+
+## To get the Documentation of Any Objects:
+```bash
 kubectl explain pod
 
-How will you deploy an application:
-1: Front end
-2: DB
-High Availability
 
-Front End:
-1: Stateless and Replica Count as 3
-2: Create a Expose the deployment as Load Balancer/NodePort
+## To deploy an application:
+### 1. Front End
+- **Stateless and Replica Count as 3**
+- **Expose the deployment as Load Balancer/NodePort**
 
-DB:
-1: A Stateful application
-2: No need to expose the application we need to create a service ClusterIP
-3: Create a Storage Class and Dynamic provisioning
-4: Storage Class will create PV and we just need to create a PV
+### 2. DB
+- **A Stateful application**
+- **No need to expose the application, create a service ClusterIP**
+- **Create a Storage Class and Dynamic provisioning**
+- **Storage Class will create PV and we just need to create a PVC**
 
-For Writing -> Data Bases
-For Reading -> ClusterIP
+**For Writing -> Databases**
+**For Reading -> ClusterIP**
 
-| Kubernetes Best Practices:
 
-1: Use Labels and annotations in Resources:
-Use labels and annotations to organize and categorize resources. This facilitates easier management, monitoring, and automation.
-annotations: used for tools and libraries
-use case is for prometheus metrics pulling
+## Kubernetes Best Practices:
 
-2: Resource Limits and Requests:
-Define resource limits and requests for CPU and memory in pod specifications to ensure optimal resource utilization and prevent resource contention.
+1. **Use Labels and Annotations in Resources:**
+   - Use labels and annotations to organize and categorize resources. This facilitates easier management, monitoring, and automation.
+   - Annotations: used for tools and libraries; use case is for Prometheus metrics pulling.
 
-3: Implement the Horizontal Pod Autoscaling (HPA):
-Implement Horizontal Pod Autoscaling to automatically adjust the number of replicas based on resource usage or custom metrics.
+2. **Resource Limits and Requests:**
+   - Define resource limits and requests for CPU and memory in pod specifications to ensure optimal resource utilization and prevent resource contention.
 
-4: Namespace Isolation:
-Use Kubernetes namespaces to isolate workloads. This provides a logical separation and helps avoid naming conflicts.
+3. **Implement Horizontal Pod Autoscaling (HPA):**
+   - Implement Horizontal Pod Autoscaling to automatically adjust the number of replicas based on resource usage or custom metrics.
 
-5: RBAC:
-Implement RBAC to control access to Kubernetes resources. Assign minimum necessary permissions to users and service accounts.
+4. **Namespace Isolation:**
+   - Use Kubernetes namespaces to isolate workloads. This provides a logical separation and helps avoid naming conflicts.
 
-6: Secrets Management:
-Use Kubernetes Secrets to store sensitive information. Regularly rotate secrets and avoid hardcoding them in configuration files.
+5. **Role-Based Access Control (RBAC):**
+   - Implement RBAC to control access to Kubernetes resources. Assign minimum necessary permissions to users and service accounts.
 
-7: Network Policies:
-Implement network policies to control the communication between pods. This helps restrict unnecessary traffic and enhances overall network security.
+6. **Secrets Management:**
+   - Use Kubernetes Secrets to store sensitive information. Regularly rotate secrets and avoid hardcoding them in configuration files.
 
-8: Use Helm for Application Packaging:
-Package and deploy applications using Helm charts. Helm simplifies the deployment process and allows for versioning and rollback.
+7. **Network Policies:**
+   - Implement network policies to control the communication between pods. This helps restrict unnecessary traffic and enhances overall network security.
 
-9: Regularly Update the Kubernetes:
-10: Backup and Disaster Recovery:
+8. **Use Helm for Application Packaging:**
+   - Package and deploy applications using Helm charts. Helm simplifies the deployment process and allows for versioning and rollback.
 
-| Kubernetes Security Considerations:
-1: Secure Kubernetes API Server
-2: Implement Network Policies
-3: Implement RBAC
-4: Image Security
-5: Cluster Monitoring
+9. **Regularly Update Kubernetes:**
+   - Keep Kubernetes updated with the latest patches and releases to ensure security and stability.
 
-1: API Server Security:
-Kube-api server is a pod
-TLS Certifications
-lock symbol is Certified website
-Secure the Kubernetes API server using authentication and authorization mechanisms. Enable audit logging for better visibility.
+10. **Backup and Disaster Recovery:**
+    - Implement backup and disaster recovery strategies to protect against data loss and ensure business continuity.
 
-2: Image Security:
-Scan container images for vulnerabilities before deploying them. Utilize image signing and promote the use of verified images.
+## Kubernetes Security Considerations:
 
-3: Network Security:
-Secure communication between nodes and the control plane components using TLS. Implement network policies to control pod-to-pod communication.
+1. **API Server Security:**
+   - Secure the Kubernetes API server using authentication and authorization mechanisms. Enable audit logging for better visibility.
 
-4: Runtime Security:
-Use PodSecurityPolicies or PodSecurity admission controllers to enforce security policies on pod specifications.
+2. **Image Security:**
+   - Scan container images for vulnerabilities before deploying them. Utilize image signing and promote the use of verified images.
 
-5: Role-Based Access Control (RBAC):
-Regularly review and update RBAC policies. Remove unnecessary privileges and regularly audit RBAC configurations.
+3. **Network Security:**
+   - Secure communication between nodes and the control plane components using TLS. Implement network policies to control pod-to-pod communication.
 
-6: Secrets Management:
-Encrypt sensitive data in transit and at rest. Use tools like sealed secrets or external secret management systems.
+4. **Runtime Security:**
+   - Use PodSecurityPolicies or PodSecurity admission controllers to enforce security policies on pod specifications.
 
-7: CIS Kubernetes Benchmarks:
-Follow the Center for Internet Security (CIS) Kubernetes benchmarks. These provide guidelines for securing Kubernetes deployments.
+5. **Role-Based Access Control (RBAC):**
+   - Regularly review and update RBAC policies. Remove unnecessary privileges and regularly audit RBAC configurations.
 
-8: Network Policies:
-Enforce network policies to control communication between pods. Regularly review and update policies based on application requirements.
+6. **Secrets Management:**
+   - Encrypt sensitive data in transit and at rest. Use tools like sealed secrets or external secret management systems.
 
-9: Pod Security Standards:
-Implement standards for pod security, including specifying resource requirements, avoiding the use of privileged containers, and following security best practices.
+7. **CIS Kubernetes Benchmarks:**
+   - Follow the Center for Internet Security (CIS) Kubernetes benchmarks. These provide guidelines for securing Kubernetes deployments.
 
-10: API Access Controls:
-Limit access to the Kubernetes API server and use RBAC to control which users and service accounts can perform specific actions.
+8. **Network Policies:**
+   - Enforce network policies to control communication between pods. Regularly review and update policies based on application requirements.
 
-11: Use Service Mesh for Enhanced Security:
-Consider implementing a service mesh like Istio for advanced features such as mutual TLS, traffic control, and telemetry.
+9. **Pod Security Standards:**
+   - Implement standards for pod security, including specifying resource requirements, avoiding the use of privileged containers, and following security best practices.
 
-12: Multi-tenancy Considerations:
-If using multi-tenancy, implement strict isolation between tenants using dedicated namespaces, network policies, and RBAC.
+10. **API Access Controls:**
+    - Limit access to the Kubernetes API server and use RBAC to control which users and service accounts can perform specific actions.
+
+11. **Use Service Mesh for Enhanced Security:**
+    - Consider implementing a service mesh like Istio for advanced features such as mutual TLS, traffic control, and telemetry.
+
+12. **Multi-tenancy Considerations:**
+    - If using multi-tenancy, implement strict isolation between tenants using dedicated namespaces, network policies, and RBAC.
 
 ### Based on The load increase how to increase:
 1. Based on the threshold we need to deploy
