@@ -63,7 +63,7 @@
 
 **Restart Policy For Pods**
 - *By default the kubernetes will restart the pod always when it fails to run the containers*
-- *We can change the `Restart Policy` we can change the setting and make a pod to fail
+- *We can change the `Restart Policy` we can change the setting and make a pod to fail*
 - #### There are 3 Type of Restart Policies
   - **Always** --> `Default Setting In K8s`
   - **OnFailure** --> `K8s will restart when container exits on non-zero exit status`
