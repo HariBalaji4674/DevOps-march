@@ -23,7 +23,9 @@ Blue Yonder 2nd Round:
 7: About Pod Lifecycle and Status
 8: How to ship Logs in Kubernetes
 9: About Resource limits and requests
-10: 
+10: What could be the reasons for pod is in pending state -> May be the containers are not ready to serve
+11: What could be the reason that service in kubernetes is not working --> May be ip address conflicts,Limits and resource exceeded
+12: 
 
 Cloud Defence AI:
 1: Introduction

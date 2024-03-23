@@ -1,0 +1,90 @@
+Pod Debugging and Troubleshoot:
+1: imagePullBackoff
+  invalid image name
+  invalid tag
+  invalid permissions
+2: ErrImagePull
+3: RegistryUnavailable
+4: CrashLoopBackOff
+5: KillContainerError
+
+Image Pulled but pod is pending:
+Resource Quota on Namespace
+Nodes does not have the required resource quotas
+Check Kube-Scheduler components
+
+Image is Pulled but pod is not ready:
+always check for the readiness probe
+
+CrashLoopBackOff:
+Liveness Probe Failure
+it is live for public sand working fine without any issues and restarting if there any issues
+Application failed to start for any reason
+
+Kubernetes Events :
+1: kubectl logs pod : kubectl logs mypod
+2: kubectl describe pod
+3: kubectl get events:
+kubectl get event --namespace abc-namespace --field-selector involvedObject.name=my-pod-zl6m6
+
+Tail Logs: kubectl logs -f mypod
+OOM Killed: Out Of Memory Killed
+Limit OverCommit Exceeded
+Container Limit Exceeded
+Resource Quotas: Requests and Limits
+kill -3 PID
+
+What are the pod status:
+1: Pending --> Pod is scheduled and all conatiners ready and started working will go to running
+2: Running --> All containers are started and serving the requests
+3: Succeeded --> When the containers is exited with success
+4: Failed --> When the containers are exited with error
+5: Unknown --> When the pod is unknown (usually node issues)
+
+How to Trouble shoot when the pod is in pending state:
+
+Why pod is Pending State:
+1: Insufficient Resources (You dont have enough resources)
+2: Taints on Nodes
+3: Node Affinity / Pod Affinity
+4: Node Selectors
+5: Dependency Management
+6: Image pull Problem
+7: Init Conatiner are not completed properly
+8: Pods are using Host ports
+
+Step By Step Trouble Shoot:
+1: Check in the scheduling state
+2: Check the image download
+3: Chcek the dependencies
+4: Check the node details about resources and allocatable memory
+5: Check the PVC is created properly and attached it to pod
+6: Check the Secrets and Config maps are attached
+7: Check the replication controller why it has not able to create a pod
+
+
+Commands need to be executed:
+1: kubectl describe pods ${pod_name}
+2: kubectl get pod -o wide
+3: kubectl get pods --field-selector=status.phase=Pending
+4: kubectl get events | grep ${podname}
+5: kubectl describe node | grep tainted
+6: kubectl describe rc ${repication controller name}
+
+How to Troubleshoot pod in waiting state:
+1: If the image you have given is incorrect
+2: make sure that image is pushed to image registry
+3: try to pull the image manually to check the image is present in registry or not
+
+My pod is running but it is not doing what i expected --> Due to missed information in yaml file
+# kubectl apply --validate -f mypod.yaml.
+
+How to trouble shoot a service:
+1: Service provide a load balancing across the pods
+2: For every service object in k8s that api server will makes endpoints
+3: kubectl get endpoints ${service name}
+
+
+
+
+

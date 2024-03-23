@@ -1,16 +1,35 @@
-Introduction:
-Kubernetes is easy
-Kubernetes is the future of DevOps
-People are moving towards Microservices
+# Heading 1
 
-Docker Vs Kubernetes
+## Heading 2
 
-Docker:
-Container Platform where it supports the building the containers
-Does not support AutoScaling
-Does not support AutoUpgrades
-Single Host
-Enterprise Level Management
+### Heading 3
+
+- List item 1
+- List item 2
+  - Nested list item
+
+**Bold Text**
+
+*Italic Text*
+
+[Link Text](http://example.com)
+
+![Image Alt Text](path/to/image.jpg)
+
+
+### Introduction:
+** Kubernetes is easy **
+- Kubernetes is the future of DevOps
+- People are moving towards Microservices
+
+* Docker Vs Kubernetes *
+
+# Docker:
+- Container Platform where it supports the building the containers
+- Does not support AutoScaling
+- Does not support AutoUpgrades
+- Single Host
+- Enterprise Level Management
 
 Containers are ephemeral in nature
 Short lived > container can die and revive anytime
