@@ -13,7 +13,7 @@
 - Service Level Objectives
 - Service Level Indicators
 
-***Monitoring 4 Topics Golden Sinals***
+***Monitoring 4 Golden Sinals***
 - Latency
 - Traffic
 - Errors
