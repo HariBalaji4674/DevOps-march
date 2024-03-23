@@ -17,7 +17,7 @@
 ![Image Alt Text](path/to/image.jpg)
 
 
-### Introduction:
+# Introduction:
 ** Kubernetes is easy **
 - Kubernetes is the future of DevOps
 - People are moving towards Microservices
@@ -31,77 +31,58 @@
 - Single Host
 - Enterprise Level Management
 
-Containers are ephemeral in nature
-Short lived > container can die and revive anytime
-Containers will die if it does not get enough resources
-Container will die if it does not support the building the image
-Docker will have only one host divided the resources into multiple
-Containers are getting effected due to lack of resource allocation between containers
+# Conatiners
+- Containers are ephemeral in nature
+- Short lived > container can die and revive anytime
+- Containers will die if it does not get enough resources
+- Container will die if it does not support the building the image
+- Docker will have only one host divided the resources into multiple
+- Containers are getting effected due to lack of resource allocation between containers
 
-Lets take some one has killed container then to application inside will not work so we need the feature called AutoHealing Capacity
+# 1
+* Lets take some one has killed container then to application inside will not work so we need the feature called AutoHealing Capacity *
+# 2
+* Lets take we are using the application at festival times or occasion time everyone will use that for offers at that time fixed container will not support that much traffic so we need auto scaling which docker does not support *
+# 3
+* Lets take we are using production systems enterprise level building need more *
+- ELB:  Load Balancers
+- Firewalls
+- All above features
 
-Lets take we are using the application at festival times or occasion time everyone will use that for offers at that time fixed container will not support that much traffic so we need auto scaling which docker does not support
+# Disadvantages of Docker:
+- AutoHealing Does not support
+- AutoScaling Does not support
+- it is single host
+- Enterprise Support does not support
+- Docker server is Crashed not able to access the application
+- More Traffic Does not support
+- Balancing Load Does Not Support
+- What about Configs and secrets Management
 
-Lets take we are using production systems enterprise level building need more
-ELB:  Load Balancers
-Firewalls
-All above features
-
-Disadvantages of Docker:
-AutoHealing Does not support
-AutoScaling Does not support
-it is single host
-Enterprise Support does not support
-Docker server is Crashed not able to access the application
-More Traffic Does not support
-Balancing Load Does Not Support
-What about Configs and secrets Management
-
-Kubernetes :
-Container Orchestration Platform
-kubernetes Supports AutoScaling > Create more Containers
-Kubernetes supports AutoHealing > Auto restart,reboot.etc..
-Single Host issue will Solve
-Enterprise level Standards
-Stores Config as 64d format
-
-Single Host :
-By Default Kubernetes is a Cluster
-Cluster is Group of nodes
-Master and Slave Model
-if the container is getting effected by another container kubernetes will move that effected container to another node so that application cannot get effected due to this.
-
-AutoScaling :
-Replication Controller/Replica set
-where we will write some yaml instructions to increase pods at specific point of time
-
-AutoHealing :
-When ever there is a damage kubernetes will control or fix the damage
-When container is going down it should get auto heal then it will create new container
-
-Enterprise Level Standard :
-Advanced Load Balancing support
-Advanced Security Support
-Load Balancing Support....
+# Kubernetes :
+- Container Orchestration Platform
+- kubernetes Supports AutoScaling > Create more Containers * Using Replica Sets *
+- Kubernetes supports AutoHealing > Auto restart,reboot.etc.. * Using Controllers and Probes *
+- Single Host issue will Solve -- By Default Kubernetes is a Cluster
+- Enterprise level Standards
+- Stores Config as 64d format
+- Master and Worker Architecture
+- If the container is affected by another container it will be moved to another node so that the application cannot get affected.
+- Enterprise Level Standard :
+- Advanced Load Balancing support * Using Service and End Points *
+- Advanced Security Support * Using Network Policies , Ingress Controllers , RBAC.. *
+- Service Discovery * Using Service ,Ingress,LoadBalancing,ClusterIP,NodePort etc.. *
+- Supports storage orchestration * Using Storage Class, Persistent Volume and Persistent Volume Claims *
+- Designed For extensibility Using * Custom Resource Definitions *
+- Batch Execution * Using K8s Jobs or Cron Jobs *
+- Automated RollOuts and Roll Backs * Using Rolling Updates and Deployment Stratagies *
+-
 
 Kubernetes Secrets Management:
 It will store all the secrets in one place either s3 Bucket or ETCd
 
-Advantages of Kubernetes:
+# Kubernetes Architecture :
 
-Kubernetes Config Map & Secrets Management
-Horizontal Scaling
-Batch Execution
-Designed For Extensibility
-Automated Bin Packing
-Automatic Rollout and RollBacks
-Storage Orchestration
-Service Discovery
-LoadBalancing
-Self Healing
-Auto-Scaling
-
-| Kubernetes Architecture :
 Docker Simplest Thing is Container
 Kubernetes Simplest Thing is Pod
 
