@@ -257,6 +257,7 @@ Kubernetes objects are persistent entities in the Kubernetes system. They repres
 - Image names and container specification
 
 ### Pod Template
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -269,7 +270,7 @@ spec:
       image: redis
       ports:
       - containerPorts: 80
-
+```
 ### Reasons for Pod Termination:
 
 1. The pod object has been deleted.
@@ -323,7 +324,7 @@ Init containers are containers that start before the actual containers are start
 4. **grpc:** Performs a remote procedure call using gRPC.
 
 ### Readinees probe and Liveness Probe yaml file
-
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -346,6 +347,7 @@ spec:
         port: 8080
       initialDelaySeconds: 15
       periodSeconds: 10
+```
 
 ## Why Pod YAML Files are Needed:
 - To bring the Declarative Capabilities for the docker commands.
