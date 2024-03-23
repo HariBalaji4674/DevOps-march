@@ -30,15 +30,28 @@
   - Prometheus --> Monitoring the Metrics(CPU,memory)
   - Grafana --> DashBoards Creations(Based on TSDB)
   - ELK --> Elastic Logstash & Kibana (Logs Management)
-  - Cloud Watch Logs
+  - Cloud Watch Logs *`Cloud Native Solutions`*
 
-***What Should we Monitor**
-- Node Health *taints & Tolerations*
-- Cluster CPU/Memory *Resource Quotas & Requests and Limits*
-- Pod Health Checks *Probes,Readiness Probes,Liveliness Probes*
-- Networking *Kube-Proxy,Ingress,Service,LoadBalancers*
-- Applications Logs *Side-Car Patterns*
+**What Should We Monitor**
+- Node Health *`taints & Tolerations`*
+- Cluster CPU/Memory *`Resource Quotas & Requests and Limits`*
+- Pod Health Checks *`Probes,Readiness Probes,Liveliness Probes`*
+- Networking *`Kube-Proxy,Ingress,Service,LoadBalancers`*
+- Applications Logs *`Side-Car Patterns`*
 
-`ELK`
+## Most Important Topics in Kubernetes
+- ### *1: Pod Health Check*
+  - **Probes**
+    - Liveness Probe
+    - Readiness Probe
+    - Start-Up Probe
+  - **Types of Probes**
+    - Command `Will be Check using Command internally insdie the container`
+    - HTTP Request
+    - TCP Request
+    - gRPC Request
+
+
+
 
 
