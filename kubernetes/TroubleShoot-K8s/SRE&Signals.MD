@@ -56,6 +56,32 @@
   - **initialDelaySeconds** `This tells kubelet to wait for 5 seconds before performing the first probe`
   - **periodSeconds** `this field specifies that kubelet should perform a liveness probe every 5 seconds`
   - **cat /tmp/health** `This check the health of conatiner if returns 0 kubelet will decide conatiner is alive and healthy`
+- ***Commands To Check the Status***
+  - kubectl get pods
+  - kubectl describe pod liveness-exec
+  - kubectl get events
+**Restart Policy For Pods**
+- *By default the kubernetes will restart the pod always when it fails to run the containers*
+- *We can change the `Restart Policy` we can change the setting and make a pod to fail
+- #### There are 3 Type of Restart Policies
+  - **Always** --> `Default Setting In K8s`
+  - **OnFailure** --> `K8s will restart when container exits on non-zero exit status`
+  - **Never** --> `K8s will never automatically restart the container if exits`
+
+***Restart Policy Yaml File***
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  restartPolicy: Always
+  containers:
+  - name: mycontainer
+    image: myimage:latest
+```
+
+
 
 
 
