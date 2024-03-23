@@ -1,0 +1,8 @@
+## Python Notes
+
+***Reverse String***
+```
+for i in range(10):
+  for j in range(i):
+    print(i,end=" ")
+```
