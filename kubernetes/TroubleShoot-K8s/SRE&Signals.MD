@@ -25,5 +25,13 @@
 - Keep Record
 - Document Everything and Every Issues
 
-***
+**Logging and Monitoring**
+- ***Tools***
+  - Prometheus --> Monitoring the Metrics(CPU,memory)
+  - Grafana --> DashBoards Creations(Based on TSDB)
+  - ELK --> Elastic Logstash & Kibana (Logs Management)
+  - Cloud Watch Logs
+
+
+
 
