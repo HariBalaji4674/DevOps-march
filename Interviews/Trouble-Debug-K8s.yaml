@@ -62,7 +62,6 @@ Step By Step Trouble Shoot:
 6: Check the Secrets and Config maps are attached
 7: Check the replication controller why it has not able to create a pod
 
-
 Commands need to be executed:
 1: kubectl describe pods ${pod_name}
 2: kubectl get pod -o wide
