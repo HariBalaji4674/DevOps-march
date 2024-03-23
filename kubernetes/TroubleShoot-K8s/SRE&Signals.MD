@@ -50,6 +50,12 @@
     - HTTP Request
     - TCP Request
     - gRPC Request
+**Liveness Probe**
+- Liveness probe is powerful way to recover from application failures
+- There are three conditions
+  - initialDelaySeconds `This tells kubelet to wait for 5 seconds before performing the first probe`
+  - periodSeconds `this field specifies that kubelet should perform a liveness probe every 5 seconds`
+  - cat /tmp/health `This check the health of conatiner if returns 0 kubelet will decide conatiner is alive and healthy`
 
 
 
