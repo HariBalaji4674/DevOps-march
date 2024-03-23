@@ -32,6 +32,13 @@
   - ELK --> Elastic Logstash & Kibana (Logs Management)
   - Cloud Watch Logs
 
+***What Should we Monitor**
+- Node Health *taints & Tolerations*
+- Cluster CPU/Memory *Resource Quotas & Requests and Limits*
+- Pod Health Checks *Probes,Readiness Probes,Liveliness Probes*
+- Networking *Kube-Proxy,Ingress,Service,LoadBalancers*
+- Applications Logs *Side-Car Patterns*
 
+`ELK`
 
 
