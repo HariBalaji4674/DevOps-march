@@ -49,7 +49,7 @@
 - Firewalls
 - All above features
 
-# Disadvantages of Docker:
+### Disadvantages of Docker:
 - AutoHealing Does not support
 - AutoScaling Does not support
 - it is single host
@@ -59,7 +59,7 @@
 - Balancing Load Does Not Support
 - What about Configs and secrets Management
 
-# Kubernetes :
+### Kubernetes :
 - Container Orchestration Platform
 - kubernetes Supports AutoScaling > Create more Containers * Using Replica Sets *
 - Kubernetes supports AutoHealing > Auto restart,reboot.etc.. * Using Controllers and Probes *
@@ -76,38 +76,38 @@
 - Designed For extensibility Using * Custom Resource Definitions *
 - Batch Execution * Using K8s Jobs or Cron Jobs *
 - Automated RollOuts and Roll Backs * Using Rolling Updates and Deployment Stratagies *
--
 
 Kubernetes Secrets Management:
 It will store all the secrets in one place either s3 Bucket or ETCd
 
-# Kubernetes Architecture :
+### Kubernetes Architecture :
 
 Docker Simplest Thing is Container
 Kubernetes Simplest Thing is Pod
 
-To run any Container we need run time environment
-Docker CRI: Docker Shim/Runc
+- To run any Container we need run time environment
+  - Docker CRI: Docker Shim/Runc
+  - K8s CRI: Containerd
+  - Kubelet: Responsible for running the pod/application
+  - Kubeproxy: responsible for networking
 
-K8s CRI: Containerd
-Kubelet: Responsible for running the pod/application
-Kubeproxy: responsible for networking
-
-Kubernetes Architecture: Managing the Hosted Applications in the form of Containers in Worker Nodes
+* Kubernetes Architecture: *
+- Managing the Hosted Applications in the form of Containers in Worker Nodes
 We look At An analogy of Ships and Containers
 
-Components: Control Node, Worker Node
-Control Nodes: Manage the Applications
-Worker Nodes: Host The Applications as Containers
+* Components: *
+- Control Node, Worker Node
+- Control Nodes: Manage the Applications
+- Worker Nodes: Host The Applications as Containers
 
-Master Node(Control Plane):
+### Master Node(Control Plane):
 
-1: Kube Api Server:
+- 1: Kube Api Server:
 The Server which is responsible for all the activities in the k8s Cluster is called Kube Api Server
 The Kubernetes API server validates and configures data for the api objects which include pods, services, replication controllers, and others.
 The API Server services REST operations and provides the frontend to the cluster's shared state through which all other components interact
 
-2: Controller Managers:
+- 2: Controller Managers:
 Which Controls and Manages the Nodes Based on State of Nodes and Controllers
 The Kubernetes controller manager is a daemon that embeds the core control loops shipped with Kubernetes.
 In applications of robotics and automation, a control loop is a non-terminating loop that regulates the state of the system
@@ -117,14 +117,14 @@ b: Pod Controller
 c: API Controller
 d: Daemon-Set Controller
 
-3: ETCD: Which stored all information about activities going on Nodes and Control Planes in a Key Value Pairs
+- 3: ETCD: Which stored all information about activities going on Nodes and Control Planes in a Key Value Pairs
 
-4: Kube-Scheduler: A component which is responsible for Scheduling the pods/Services based on the availability of node status , Taints and Tolerations node affinity etc..
+- 4: Kube-Scheduler: A component which is responsible for Scheduling the pods/Services based on the availability of node status , Taints and Tolerations node affinity etc..
 
-Worker Nodes: (Data Plane)
-1: Kubelet: A component which is responsible of collecting and Sharing and managing all the information about nodes and containers in the cluster
-2: Kube-Proxy: a component which enables the communication between each container in the Cluster
-3: Container Run time: A component which is responsible for Running the Containers
+### Worker Nodes: (Data Plane)
+- 1: Kubelet: A component which is responsible of collecting and Sharing and managing all the information about nodes and containers in the cluster
+- 2: Kube-Proxy: a component which enables the communication between each container in the Cluster
+- 3: Container Run time: A component which is responsible for Running the Containers
 
 
 What are Kubernetes Objects:
