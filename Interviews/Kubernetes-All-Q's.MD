@@ -1,22 +1,3 @@
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-- List item 1
-- List item 2
-  - Nested list item
-
-**Bold Text**
-
-*Italic Text*
-
-[Link Text](http://example.com)
-
-![Image Alt Text](path/to/image.jpg)
-
-
 # Introduction:
 *Kubernetes is easy*
 - Kubernetes is the future of DevOps
