@@ -636,12 +636,10 @@ For DB, EBS is preferred due to low latency and direct attachment to the contain
   3. Users: for which users have the access with
 
 ## Deploy Nginx:
-```bash
 kubectl run nginx --image=nginx
 
 
 ## List of resources/Objects:
-```bash
 kubectl api-resources
 
 ## Fields:
@@ -650,7 +648,6 @@ kubectl api-resources
 - APIVersion
 - Namespaced
 - KIND
-
 
 ## List Of Objects which you worked on:
 - Pod
@@ -666,9 +663,7 @@ kubectl api-resources
 - Ingress
 
 ## To get the Documentation of Any Objects:
-```bash
 kubectl explain pod
-
 
 ## To deploy an application:
 ### 1. Front End
@@ -683,7 +678,6 @@ kubectl explain pod
 
 **For Writing -> Databases**
 **For Reading -> ClusterIP**
-
 
 ## Kubernetes Best Practices:
 
