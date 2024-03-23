@@ -60,6 +60,7 @@
   - kubectl get pods
   - kubectl describe pod liveness-exec
   - kubectl get events
+
 **Restart Policy For Pods**
 - *By default the kubernetes will restart the pod always when it fails to run the containers*
 - *We can change the `Restart Policy` we can change the setting and make a pod to fail
