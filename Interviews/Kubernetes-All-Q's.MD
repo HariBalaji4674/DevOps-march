@@ -46,7 +46,7 @@
 - Kubernetes supports AutoHealing > Auto restart,reboot.etc.. *Using Controllers and Probes*
 - Single Host issue will Solve -- By Default Kubernetes is a Cluster
 - Enterprise level Standards
-- Stores Config as 64d format
+- Stores Secret as 64d encoded format
 - Master and Worker Architecture
 - If the container is affected by another container it will be moved to another node so that the application cannot get affected.
 - Enterprise Level Standard :
