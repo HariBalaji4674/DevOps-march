@@ -18,7 +18,7 @@
 
 
 # Introduction:
-** Kubernetes is easy **
+*Kubernetes is easy*
 - Kubernetes is the future of DevOps
 - People are moving towards Microservices
 
@@ -39,12 +39,12 @@
 - Docker will have only one host divided the resources into multiple
 - Containers are getting effected due to lack of resource allocation between containers
 
-# 1
-* Lets take some one has killed container then to application inside will not work so we need the feature called AutoHealing Capacity *
-# 2
-* Lets take we are using the application at festival times or occasion time everyone will use that for offers at that time fixed container will not support that much traffic so we need auto scaling which docker does not support *
-# 3
-* Lets take we are using production systems enterprise level building need more *
+### 1
+*Lets take some one has killed container then to application inside will not work so we need the feature called AutoHealing Capacity*
+### 2
+*Lets take we are using the application at festival times or occasion time everyone will use that for offers at that time fixed container will not support that much traffic so we need auto scaling which docker does not support*
+### 3
+*Lets take we are using production systems enterprise level building need more*
 - ELB:  Load Balancers
 - Firewalls
 - All above features
@@ -61,21 +61,21 @@
 
 ### Kubernetes :
 - Container Orchestration Platform
-- kubernetes Supports AutoScaling > Create more Containers * Using Replica Sets *
-- Kubernetes supports AutoHealing > Auto restart,reboot.etc.. * Using Controllers and Probes *
+- kubernetes Supports AutoScaling > Create more Containers *Using Replica Sets*
+- Kubernetes supports AutoHealing > Auto restart,reboot.etc.. *Using Controllers and Probes*
 - Single Host issue will Solve -- By Default Kubernetes is a Cluster
 - Enterprise level Standards
 - Stores Config as 64d format
 - Master and Worker Architecture
 - If the container is affected by another container it will be moved to another node so that the application cannot get affected.
 - Enterprise Level Standard :
-- Advanced Load Balancing support * Using Service and End Points *
-- Advanced Security Support * Using Network Policies , Ingress Controllers , RBAC.. *
-- Service Discovery * Using Service ,Ingress,LoadBalancing,ClusterIP,NodePort etc.. *
-- Supports storage orchestration * Using Storage Class, Persistent Volume and Persistent Volume Claims *
-- Designed For extensibility Using * Custom Resource Definitions *
-- Batch Execution * Using K8s Jobs or Cron Jobs *
-- Automated RollOuts and Roll Backs * Using Rolling Updates and Deployment Stratagies *
+- Advanced Load Balancing support *Using Service and End Points*
+- Advanced Security Support *Using Network Policies , Ingress Controllers , RBAC..*
+- Service Discovery *Using Service ,Ingress,LoadBalancing,ClusterIP,NodePort etc..*
+- Supports storage orchestration *Using Storage Class, Persistent Volume and Persistent Volume Claims*
+- Designed For extensibility Using *Custom Resource Definitions*
+- Batch Execution *Using K8s Jobs or Cron Jobs*
+- Automated RollOuts and Roll Backs *Using Rolling Updates and Deployment Stratagies*
 
 Kubernetes Secrets Management:
 It will store all the secrets in one place either s3 Bucket or ETCd
@@ -91,11 +91,11 @@ Kubernetes Simplest Thing is Pod
   - Kubelet: Responsible for running the pod/application
   - Kubeproxy: responsible for networking
 
-* Kubernetes Architecture: *
+*Kubernetes Architecture:*
 - Managing the Hosted Applications in the form of Containers in Worker Nodes
 We look At An analogy of Ships and Containers
 
-* Components: *
+*Components:*
 - Control Node, Worker Node
 - Control Nodes: Manage the Applications
 - Worker Nodes: Host The Applications as Containers
@@ -854,96 +854,90 @@ Consider implementing a service mesh like Istio for advanced features such as mu
 12: Multi-tenancy Considerations:
 If using multi-tenancy, implement strict isolation between tenants using dedicated namespaces, network policies, and RBAC.
 
-Based on The load increase how to increase:
-1: Based on the threshold we need to deploy
-2: Horizontal Pod Auto-scalar
+### Based on The load increase how to increase:
+1. Based on the threshold we need to deploy
+2. Horizontal Pod Auto-scaler
 
-What is Image Pull Policy:
-1: IfNotPresent
-2: Always
-3: Never
+### What is Image Pull Policy:
+1. IfNotPresent
+2. Always
+3. Never
 
-What is Container Pull Policy:
+### What is Container Pull Policy:
 Container Restart Policy:
-1: Always
-2: OnFailure
-3: Never
+1. Always
+2. OnFailure
+3. Never
 
-Pod Phase/Status:
-1: Pending
-2: Running
-3: Succeeded
-4: Failed
-5: Unknown
+### Pod Phase/Status:
+1. Pending
+2. Running
+3. Succeeded
+4. Failed
+5. Unknown
 
-Container States/Status:
-1: Waiting
-2: Running
-3: Terminated
+### Container States/Status:
+1. Waiting
+2. Running
+3. Terminated
 
-Pod Checking Mechanisms:
-What is A Probe :
-a Diagnostic performed periodically by the kubelet on a container
-1: exec
-2: grpc
-3: httpGet
-4: tcpSocket
+### Pod Checking Mechanisms:
+#### What is A Probe:
+A diagnostic performed periodically by the kubelet on a container
+1. exec
+2. grpc
+3. httpGet
+4. tcpSocket
 
-Probe OutCome:
-Success
-Failure
-Unknown
+### Probe OutCome:
+- Success
+- Failure
+- Unknown
 
-Types of Probes:
-livenessProbe
-readinessProbe
-StartupProbe
+### Types of Probes:
+- livenessProbe
+- readinessProbe
+- StartupProbe
 
-What is an OOM Killed:
-1: Out Of Memory Issue
-2: We will implement Resources Requests and Limits memory
-3: 1vCPU = 1000m(Milli Cores) 1 GB = 1024Mb
 
-What is ImagePullBackOff:
-1: When the container run time not able to pull the image
+### What is an OOM Killed:
+1. Out Of Memory Issue
+2. We will implement Resources Requests and Limits memory
+3. 1vCPU = 1000m (Milli Cores), 1 GB = 1024Mb
 
-How to store the images in private and pull from Private repo:
+### What is ImagePullBackOff:
+1. When the container run time is not able to pull the image
+
+### How to store the images in private and pull from Private repo:
 Create a Secret
 
-Can Pod Have Multiple Containers:
-max 2 containers
+### Can Pod Have Multiple Containers:
+Maximum 2 containers
 
-We have S3 Bucket and Have a File we need to install those file to access the application what pattern you will follow:
-1: i will follow the init containers
-volume as : emptyDir
-download the file in empty directory
+### We have an S3 Bucket and a File we need to install those files to access the application, what pattern will you follow:
+1. I will follow the init containers
+   - Volume: `emptyDir` `HostPath`
+   - Download the file in the empty directory
 
-can we have multiple init container and if fails:
-1: Yes we can have
-2: It will restart
+### Can we have multiple init containers and if one fails:
+1. Yes, we can have multiple init containers
+2. It will restart
 
-How many init containers have: there is no limit
-Situation:
-To Ship Logs Side car Containers
+### How many init containers can we have:
+There is no limit
 
-What are distroless images:
-there is no utilities in image these are called distroless images
+### Situation:
+To Ship Logs Sidecar Containers
 
-Deployments:
-1: Canary Deployments
-2: Blue-Green/Black-Red Deployments
-3: A/B Testing
+### What are distroless images:
+There are no utilities in the image; these are called distroless images
 
-What is the replica set: It is a Controller
-
-# Interview Questions:
-
-How to show all labels: kubectl get pods --show-labels
-
+### Interview Questions:
+"""
+-How to show all labels: kubectl get pods --show-labels
 What happen if we do not mention any labels
 it will create default labels:
 run: <metadata.name>
-
 How to Add More labels to a pod:
 kubectl labels pod <pod-name> env=dev bus=iot
 
@@ -952,37 +946,21 @@ kubectl label pod <pod-name> --override
 
 How to remove the labels:
 kubectl labels pod <pod-name> -l app-
+"""
+**What are Annotations:**
+- Non Identifying metadata or key value pairs it is used for extra tools or utilities
+- when we need to integrate with any other tools these annotations will be helpful
 
-What are Annotations:
-non Identifying metadata or key value pairs it is used for extra tools or utilities
+**How many types of Selectors:**
+- 1: Equality Based Selectors: --> uses  RC, Services
+*Equality and Not Equality Checking #app=env app!=frontend % Using Equal operator*
 
-when we need to integrate with any other tools these annotations will be helpful
-
-How many types of Selectors:
-1: Equality Based Selectors: --> uses  RC, Services
-Equality and Not Equality Checking
-#app=env app!=frontend
-% Using Equal operator
-
-2: Set Based Selectors: --> Used Replica Sets, Deployments Etc..
-# env in (qa,uat) OR
-# app notin (front-end, backend)
-% Using Set operator
+- 2: Set Based Selectors: --> Used Replica Sets, Deployments Etc..
+*env in (qa,uat) OR app 'notin' (front-end, backend) '%' Using Set operator*
 
 Deployments, Replicasets and StatefulSets will get matchLabels section
 
-| What is Kubernetes and why is so popular:
-
-apiVersion: v1
-kind: Explanation
-metadata:
-name: Kubernetes
-spec:
-description: |
-Kubernetes is an open-source container orchestration platform designed for automating
-the deployment, scaling, and management of containerized applications.
-
-features:
+**features:**
 - ContainerOrchestration: true
 - Portability: true
 - Scalability: true
@@ -994,56 +972,45 @@ features:
 - MultiCloudAndHybridCloud: true
 - Extensibility: true
 
-reasonsForPopularity: |
-Kubernetes has become popular due to its ability to simplify containerized application
-management, ensure portability across various environments, enable scalability, support
-rolling updates and rollbacks, provide self-healing mechanisms, use declarative
-configuration, foster a vibrant ecosystem and community, work well in multi-cloud
-and hybrid cloud deployments, and offer extensibility for diverse use cases.
+**What is Kubernetes and why is so popular Reasons For Kuberenetes Popularity**
+- Kubernetes has become popular due to its ability to simplify containerized application
+- management, ensure portability across various environments, enable scalability, support
+- rolling updates and rollbacks, provide self-healing mechanisms, use declarative
+- configuration, foster a vibrant ecosystem and community, work well in multi-cloud
+- and hybrid cloud deployments, and offer extensibility for diverse use cases.
 
-What is self Healing and What components are used:
-
+**What is self Healing and What components are used:**
 Self Healing means it will automatically heal the pod and containers
+  - 1: Probes will be used
+  - 2: Readiness Probe
+  - 3: Liveliness Probe
+  - 4: Health Check about the pods
 
-Liveliness and Readiness Probes
-Health pod status
 
-Is Kubernetes is Portable:
-Portability is Primarily achieved :
-1: Containerization
-2: Abstraction of Infrastructure
-3: Declarative Configuration
-4: Cloud-Agnostic
-5: Compatibility with CNCF Standards
+**Is Kubernetes is Portable:**
+- Portability is Primarily achieved :
+  - 1: Containerization
+  - 2: Abstraction of Infrastructure
+  - 3: Declarative Configuration
+  - 4: Cloud-Agnostic
+  - 5: Compatibility with CNCF Standards
 
-How does k8s ensure High Availability:
-Kubernetes follows several mechanisms to ensure high availability of applications and the platform itself
-1: Node Redundancy
-2: Pod Distribution
-3: Self Healing
-4: Replica Sets
-5: Master Node Redundancy
-6: Etcd Cluster
-7: Load Balancing
-8: Rolling Updates
+### How does k8s ensure High Availability:
+**Kubernetes follows several mechanisms to ensure high availability of applications and the platform itself**
+- 1: Node Redundancy
+- 2: Pod Distribution
+- 3: Self Healing
+- 4: Replica Sets
+- 5: Master Node Redundancy
+- 6: Etcd Cluster
+- 7: Load Balancing
+- 8: Rolling Updates
 
-Can you explain me the k8s Service and Deployment:
+**K8s Cluster Upgrades : 1.29 Mandala**
+- Self Hosted Cluster
+- Scaling Kubernetes
+- Horizontal Pod AutoScaler
+- Vertical Pod AutoScalar
 
-Service Provides the Stable IP for The application for DNS
-
-K8s Cluster Upgrades : 1.29 Mandala
-Self Hosted Cluster
-Scaling Kubernetes
-Horizontal Pod AutoScaler
-Vertical Pod AutoScalar
-
-Kubernetes namespace:
-These are isolated environment for giving process ids for each containers
-
-How do you use Config Map:
-First we need to create a
-
-Deployment Stratagies:
-kubectl set --image --deployment.
-
-kubectl run <pod-name> --image=nginx --requests
+**Kubernetes namespace:**
+*These are isolated environment for giving process ids for each containers*
