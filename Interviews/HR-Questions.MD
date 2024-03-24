@@ -21,7 +21,7 @@
 **1: Why Should we hire You ?**
 - 1: Your decision to hire me would provide me an excellent platform for showcasing my skills. I am Commited to acheiving a set of goals promptly
 
-- 2: My Hands-On Experience and coupled with continuous learning and improvement, and I am confident in my ability to quickly grasp new concepts and technologies. I am also a collaborative team player who thrives in environments where I can contribute my ideas and work closely with others to achieve common goals. Which makes me a great asset to the team and organization
+- 2: My Hands-On Experience and coupled with continuous learning ,improvement and I am confident in my ability to quickly grasp new concepts and technologies. I am also a collaborative team player who thrives in environments where I can contribute my ideas and work closely with others to achieve common goals. Which makes me a great asset to the team and organization
 
 **2: What is your Strength ?**
 - My Strength lies in swiftly acquiring new concepts and collaborating seamlessly within a team
@@ -35,6 +35,8 @@
 - 2: I feel that i am ready to take a new challenges & responsibilities to expand my skillset which aligns with my career goals and also to develop professionally.
 
 **5: Where do you see yourself in 5 years ?**
-- 1: I envision myself occupying senior role overseeing critical projects within this company is my outlook for the next five years
+- 1: I envision myself occupying senior role overseeing critical projects within this company is my outlook for the next five years.
+
+
 
 
