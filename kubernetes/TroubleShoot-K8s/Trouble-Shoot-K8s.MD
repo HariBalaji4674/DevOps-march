@@ -185,13 +185,13 @@ spec:
   - With This you can enable resource Quota and ObjectQuota
 
 ## Insufficient Node Resources
-- *Based On the ranking and priority pods will get evicted if the node resources are not sufficient and remaining pods will get deleted from one particular nodes
+- *Based On the ranking and priority pods will get evicted if the node resources are not sufficient and remaining pods will get deleted from one particular nodes*
 - Implement the node autoscalers
 - Implement the Cluster auto scaling
 - reduce the workloads on nodes based on the priority
 
 **Kubernetes Descheduler**
-- 
+-
 
 
 
