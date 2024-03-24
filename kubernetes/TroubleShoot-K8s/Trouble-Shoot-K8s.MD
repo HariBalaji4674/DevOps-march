@@ -196,7 +196,36 @@ spec:
 - Excessive Pod Restarts Deletes by Scheduler
 - Node Utilization Levels
 - Pod Distribution Across Nodes
-- 
+
+**Understanding The Deployments**
+- There are two types of operations will be done in Deployments
+  - Client side Validations
+  - Server Side Validations
+
+## *Client Side Validations*
+- Authentication
+- Validations `Ensure the resource type ,group and client credentials are valid`
+- Context & Validations `Extract Current Context cluster and Authentication information from kubeconfig`
+- HTTP Request `Form and send the Deployment request to the API Server`
+
+## *Server Side Validations*
+- Authentication and Authorization
+- Admission Control
+  - Two Types of Admission Controls
+    - Mutators `Mutations`
+    - WebHooks/Validators `Allows Users`
+- ETCD `Once validations are succesfull it will be stored in ETCD`
+- Controller `Deployment controller watches for deployment for actual and desired pods to be there`
+- Scheduler `Schedules the pod to the particular nodes`
+- Kubelet  `Watches Scheduler`
+  - Create Pod
+    - Pull Image
+    - Pod StartUp
+    - Start Containers
+    - Monitor Pod Health
+    - Update Status of API Server
+
+
 
 
 
