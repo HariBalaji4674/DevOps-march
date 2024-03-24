@@ -90,7 +90,7 @@ spec:
       periodSeconds: 30
 ```
 
-**Startup Probe**
+## **Startup Probe**
 - Similar to the liveness probe however liveness probe run constantly on a schedule , startup probe run at container startup and stop running once they succeed
 - They are used to determins when the application has successfully started
 - Start Up probe are especially useful for some legacy applications that can have long startup times
@@ -173,6 +173,11 @@ spec:
 ***Rolling Updates in Kubernetes***
 - *Important Fields*
   - targetGracePeriodSeconds `K8s should wait before forcefully terminating a pod during a rolling update or deletion`
+
+
+## NameSpaces and Resource Quotas
+
+
 
 
 
