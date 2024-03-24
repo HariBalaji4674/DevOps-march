@@ -197,7 +197,7 @@ spec:
 - Node Utilization Levels
 - Pod Distribution Across Nodes
 
-**Understanding The Deployments**
+# **Understanding The Deployments**
 - There are two types of operations will be done in Deployments
   - Client side Validations
   - Server Side Validations
