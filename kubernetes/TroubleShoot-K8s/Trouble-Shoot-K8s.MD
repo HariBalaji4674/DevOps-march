@@ -312,6 +312,10 @@ How to Trouble shoot when the pod is in pending state:
 - 2: For every service object in k8s that api server will makes endpoints
 - 3: kubectl get endpoints ${service name}
 
+## Get a Shell to a Running Container
+- Run `kubectl exec`
+- when multiple containers are running inside one pod `kubectl exec -it pod --container main-container -- /bin/bash`
+
 
 
 
