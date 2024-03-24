@@ -15,3 +15,25 @@ spec:
     requests.memory: 4Gi
     limits.cpu: "6"
     limits.memory: 6Gi
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-replicaset
+  namespace: hari-namespace
+spec:
+  replicas: 11
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+

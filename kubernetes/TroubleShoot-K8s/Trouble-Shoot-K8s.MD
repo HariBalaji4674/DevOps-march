@@ -184,6 +184,9 @@ spec:
 - To Achieve this you can divide everyone to use their own namespaces
   - With This you can enable resource Quota and ObjectQuota
 
+## Insufficient Node Resources
+
+
 
 
 

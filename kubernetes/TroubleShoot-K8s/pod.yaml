@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: my-replicaset
+  namespace: hari-namespace
 spec:
   replicas: 11
   selector:
