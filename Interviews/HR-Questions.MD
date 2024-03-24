@@ -7,6 +7,14 @@
 - 5. Do they offer medical insurance for dependents?
 - 6. what kind of project will you be working on? (is it something that will challenge/ help me grow)
 
+## What Question Can we ask after the interview:
+
+- 1: What Oppurtunities are there for professional developement and growth within the company or within the position
+- 2: Can you tell me more about the team i wolud be a working with.
+- 3: What are the next steps of the process and when can i expect to hear from you
+- 4: How do you measure success in this position.
+- 5: Can you tell me the typical day look like in this role.
+- 6: What could be your suggestion to learn with in one month span of time after joining
 
 ## HR Questions To Us and Answers
 
