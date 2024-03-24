@@ -1,2 +1,2 @@
 # DevOps-march
-Docker, Terraform, Kubernetes, AWS, Python
+*Docker, Terraform, Kubernetes, AWS, Python*

@@ -10,11 +10,11 @@
 ## What Question Can we ask after the interview:
 
 - 1: What Oppurtunities are there for professional developement and growth within the company or within the position
-- 2: Can you tell me more about the team i wolud be a working with.
+- 2: Can you tell me more about the team i wolud be a working with?.
 - 3: What are the next steps of the process and when can i expect to hear from you
 - 4: How do you measure success in this position.
 - 5: Can you tell me the typical day look like in this role.
-- 6: What could be your suggestion to learn with in one month span of time after joining
+- 6: What are your expectations from a new hire for this position.
 
 ## HR Questions To Us and Answers
 
@@ -36,6 +36,12 @@
 
 **5: Where do you see yourself in 5 years ?**
 - 1: I envision myself occupying senior role overseeing critical projects within this company is my outlook for the next five years.
+
+**6: Who all are there in your family? **
+- we are a nuclear family with four members dad is a Farmer mother is a home maker elder brother works in it and me.
+
+**7: What is your current CTC ?**
+- My current CTC is 4.15 LPA which includes Bonus,other Benefits. However i have upskilled myself by doing various trainings,courses and certifications which has improved my profile i am expecting a hike of Minimum 100% on my curreny CTC.
 
 
 

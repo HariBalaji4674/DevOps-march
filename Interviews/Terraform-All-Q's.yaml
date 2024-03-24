@@ -22,7 +22,7 @@ What are advantages of Terraform:
 Variables and Outputs:
 
 1: | Variables
-- Servers as Parameters for a Terraform Modukes/code.
+- Servers as Parameters for a Terraform Modules/code.
 - So Users can customize behavior without editing the the source code
 2: | Outputs
 - Return Values for a terraform module
@@ -67,11 +67,11 @@ Functions:
 Hashi-Corp Configuration Language:
 1: Variables:
   - Types of Variables
-  - String
-  - bool
-  - number
-  - Map
-  - List
+    - String
+    - bool
+    - number
+    - Map
+    - List
 2: Loops
 3: Locals
 4: Data Types
@@ -107,7 +107,7 @@ What is Terraform D:
 
 What is the purpose of Null Resources:
   A standard resource library is implemented by null resources but no further action is done
-  A Null resources will not create any kind of resources but it execute some scripts in localmexec and install the external libraries 
+  A Null resources will not create any kind of resources but it execute some scripts in localmexec and install the external libraries
 
 Most Common CLI Commands:
 
