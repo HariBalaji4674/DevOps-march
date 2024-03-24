@@ -90,17 +90,6 @@ spec:
       periodSeconds: 30
 ```
 
-- ### *Liveness Probe three conditions*
-
-  - **initialDelaySeconds** `This tells kubelet to wait for 5 seconds before performing the first probe`
-  - **periodSeconds** `this field specifies that kubelet should perform a liveness probe every 5 seconds`
-  - **cat /tmp/health** `This check the health of conatiner if returns 0 kubelet will decide conatiner is alive and healthy`
-
-- ***Commands To Check the Status***
-  - kubectl get pods
-  - kubectl describe pod liveness-exec
-  - kubectl get events
-
 **Startup Probe**
 - Similar to the liveness probe however liveness probe run constantly on a schedule , startup probe run at container startup and stop running once they succeed
 - They are used to determins when the application has successfully started
@@ -124,6 +113,42 @@ spec:
       periodSeconds: 10
       initialDelaySeconds: 10
 ```
+
+## **Readiness Probe**
+- Readiness Probe are used to determine when a conatiner is ready to accept requests
+- When you have a service backed by multiple container endpoints user traffic will not be sent to a particular pod until its containers have passes all the readiness checks defined by their readiness probes
+- Use Reainess probe to prevent user traffic from beings ent to pods that are still in the process of starting up
+
+***Readiness Probe Yaml Manifest***
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: mycontainer
+    image: myimage:latest
+    readinessProbe:
+      httpGet:
+        path: /healthz
+        port: 8080
+      initialDelaySeconds: 10
+      periodSeconds: 5
+```
+
+- ### *Liveness Probe three conditions*
+
+  - **initialDelaySeconds** `This tells kubelet to wait for 5 seconds before performing the first probe`
+  - **periodSeconds** `this field specifies that kubelet should perform a liveness probe every 5 seconds`
+  - **cat /tmp/health** `This check the health of conatiner if returns 0 kubelet will decide conatiner is alive and healthy`
+  - **failureThreshold** `indicates the number of consecutive failures required to consider the probe as failed.`
+
+- ***Commands To Check the Status***
+  - kubectl get pods
+  - kubectl describe pod liveness-exec
+  - kubectl get events
+
 **Restart Policy For Pods**
 - *By default the kubernetes will restart the pod always when it fails to run the containers*
 - *We can change the `Restart Policy` we can change the setting and make a pod to fail*
