@@ -359,14 +359,19 @@ spec:
 
 ## Kubernetes Deployments:
 ### Deployment vs ReplicaSet vs Pod vs Container
+
 - **Container:** Docker; lightweight in nature for running the application with all application-related packages and dependencies along with minimal OS usage.
+
 - **ReplicaSet:** Maintains the desired number of pods/run the containers inside the pod for high availability.
+
 - **Deployment:** Developed to update anything in the pods, including configuration files, by developing a Deployment set manifest file.
 
 ## In Kubernetes Environment:
+
 - **Master/Cluster:**
   - After Successful Minikube Installation, check the Files are there or not (`ls -l > kubeconfig, kubeconfig_ip`).
   - Then create a .kube directory (`mkdir .kube`), and copy kubeconfig as config to the .kube directory.
+
 - **Worker Node(WorkStation):**
   - Checking The log files for Installation: `tail -f /var/log/cloudinitoutput.log`.
   - Install `kubectl` in Worker Node, create `.kube` directory (`mkdir .kube`), then add authentication to the `.kube` config file.

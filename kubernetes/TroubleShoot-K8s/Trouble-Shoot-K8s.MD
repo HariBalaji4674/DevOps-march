@@ -40,16 +40,24 @@
 - Applications Logs *`Side-Car Patterns`*
 
 ## Most Important Topics in Kubernetes
-- ### *1: Pod Health Check*
+- ### *1: Monitoring Containers & Pod Health Check using Probes*
+
   - **Probes**
     - Liveness Probe
     - Readiness Probe
     - Start-Up Probe
-  - **Types of Probes**
+
+  - **Types of Probes Health Check**
     - Command `Will be Check using Command internally insdie the container`
     - HTTP Request
     - TCP Request
     - gRPC Request
+
+  - **Errors Occur when Porbes Failed**
+    - CrashLoopBackOff
+    - ImageCrashLoopBackOff
+    - Err Image Pull
+
 **Liveness Probe**
 - Liveness probe is powerful way to recover from application failures
 - There are three conditions
@@ -81,6 +89,10 @@ spec:
   - name: mycontainer
     image: myimage:latest
 ```
+
+***Rolling Updates in Kubernetes***
+- *Important Fields*
+  - targetGracePeriodSeconds `K8s should wait before forcefully terminating a pod during a rolling update or deletion`
 
 
 
