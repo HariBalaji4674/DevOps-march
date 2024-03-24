@@ -64,7 +64,8 @@
     - ImageCrashLoopBackOff
     - Err Image Pull
 
-**Liveness Probe**
+## **Liveness Probe**
+
 - Liveness probe is powerful way to recover from application failures
 - Liveness probe allow you to automatically determine container application health state
 - By Default K8s will only consider a conatiner to be terminated if the container process stops
@@ -89,7 +90,8 @@ spec:
       periodSeconds: 30
 ```
 
-- There are three conditions
+- ### *Liveness Probe three conditions*
+
   - **initialDelaySeconds** `This tells kubelet to wait for 5 seconds before performing the first probe`
   - **periodSeconds** `this field specifies that kubelet should perform a liveness probe every 5 seconds`
   - **cat /tmp/health** `This check the health of conatiner if returns 0 kubelet will decide conatiner is alive and healthy`
@@ -99,6 +101,29 @@ spec:
   - kubectl describe pod liveness-exec
   - kubectl get events
 
+**Startup Probe**
+- Similar to the liveness probe however liveness probe run constantly on a schedule , startup probe run at container startup and stop running once they succeed
+- They are used to determins when the application has successfully started
+- Start Up probe are especially useful for some legacy applications that can have long startup times
+
+***Start Up Probe Yaml Manifest***
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: mycontainer
+    image: myimage:latest
+    startupProbe:
+      httpGet:
+        path: /ready
+        port: 8080
+      failureThreshold: 30
+      periodSeconds: 10
+      initialDelaySeconds: 10
+```
 **Restart Policy For Pods**
 - *By default the kubernetes will restart the pod always when it fails to run the containers*
 - *We can change the `Restart Policy` we can change the setting and make a pod to fail*
