@@ -177,6 +177,13 @@ spec:
 
 ## NameSpaces and Resource Quotas
 
+### **Resource Quotas**
+- Resource Management is Most important in Kubernetes if the cluster is shared
+- *Why?*
+  - To Avoid any Particular team or person to consume all the resources
+- To Achieve this you can divide everyone to use their own namespaces
+  - With This you can enable resource Quota and ObjectQuota
+
 
 
 
