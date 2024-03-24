@@ -41,6 +41,11 @@
 
 ## Most Important Topics in Kubernetes
 - ### *1: Monitoring Containers & Pod Health Check using Probes*
+  - Container Health `Auto Healing Features`
+    - Automaticall Restart unhealthy containers
+    - Active Monitoring
+      - Pull The status Healthy or not
+      - Application Status should be accurate
 
   - **Probes**
     - Liveness Probe
@@ -49,9 +54,10 @@
 
   - **Types of Probes Health Check**
     - Command `Will be Check using Command internally insdie the container`
-    - HTTP Request
-    - TCP Request
-    - gRPC Request
+    - HTTP Probe
+    - TCP Probe
+    - gRPC Probe
+    - Exec Probe
 
   - **Errors Occur when Porbes Failed**
     - CrashLoopBackOff
@@ -60,10 +66,34 @@
 
 **Liveness Probe**
 - Liveness probe is powerful way to recover from application failures
+- Liveness probe allow you to automatically determine container application health state
+- By Default K8s will only consider a conatiner to be terminated if the container process stops
+- Liveness probe allows you to customize this detection mechanism and make it more flexible
+
+**Liveness Probe Yaml manifest**
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: mycontainer
+    image: myimage:latest
+    livenessProbe:
+      httpGet:
+        path: /healthz
+        port: 8080
+      initialDelaySeconds: 10
+      periodSeconds: 30
+```
+
 - There are three conditions
   - **initialDelaySeconds** `This tells kubelet to wait for 5 seconds before performing the first probe`
   - **periodSeconds** `this field specifies that kubelet should perform a liveness probe every 5 seconds`
   - **cat /tmp/health** `This check the health of conatiner if returns 0 kubelet will decide conatiner is alive and healthy`
+
 - ***Commands To Check the Status***
   - kubectl get pods
   - kubectl describe pod liveness-exec
