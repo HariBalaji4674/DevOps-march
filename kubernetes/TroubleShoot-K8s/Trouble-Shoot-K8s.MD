@@ -316,6 +316,9 @@ How to Trouble shoot when the pod is in pending state:
 - Run `kubectl exec`
 - when multiple containers are running inside one pod `kubectl exec -it pod --container main-container -- /bin/bash`
 
+## Debugging Running Pods
+- Container status `waiting ,running,terminated`
+
 
 
 
