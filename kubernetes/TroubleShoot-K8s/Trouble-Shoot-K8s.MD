@@ -191,7 +191,12 @@ spec:
 - reduce the workloads on nodes based on the priority
 
 **Kubernetes Descheduler**
--
+- Utilize the taints and Tolerations
+- Pod Affinity and Anti-Affinity Violations
+- Excessive Pod Restarts Deletes by Scheduler
+- Node Utilization Levels
+- Pod Distribution Across Nodes
+- 
 
 
 
