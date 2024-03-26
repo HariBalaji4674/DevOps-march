@@ -24,7 +24,8 @@
 - git revert --soft
 - git revert --medium
 - git stash
-- git 
+- git merge conflicts
+-
 
 
 GIT Course Introduction (01:45)
