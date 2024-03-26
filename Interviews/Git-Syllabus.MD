@@ -23,6 +23,8 @@
 - git revert --hard
 - git revert --soft
 - git revert --medium
+- git stash
+- git 
 
 
 GIT Course Introduction (01:45)
