@@ -2,6 +2,8 @@
 
 [Kuberenetes 100 Questions](https://medium.com/@jaya.surya8068/top-100-kubernetes-interview-questions-and-answer-5adb4c427b17)
 
+[Best practices for maintaining and scaling EKS clusters in production environments](https://overcast.blog/best-practices-for-maintaining-and-scaling-eks-clusters-in-production-environments-145ba2c850cb)
+
 *Kubernetes is easy*
 
 - Kubernetes is the future of DevOps
