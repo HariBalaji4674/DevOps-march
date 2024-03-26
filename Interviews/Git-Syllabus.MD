@@ -25,7 +25,7 @@
 - git revert --medium
 - git stash
 - git merge conflicts
--
+- pull requests
 
 
 GIT Course Introduction (01:45)
