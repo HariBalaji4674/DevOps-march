@@ -53,7 +53,6 @@
 - Stores Secret as 64d encoded format
 - Master and Worker Architecture
 - If the container is affected by another container it will be moved to another node so that the application cannot get affected.
-- Enterprise Level Standard :
 - Advanced Load Balancing support *Using Service and End Points*
 - Advanced Security Support *Using Network Policies , Ingress Controllers , RBAC..*
 - Service Discovery *Using Service ,Ingress,LoadBalancing,ClusterIP,NodePort etc..*
