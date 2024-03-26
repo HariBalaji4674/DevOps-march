@@ -9,7 +9,7 @@
 - Kubernetes is the future of DevOps
 - People are moving towards Microservices
 
-*Docker Vs Kubernetes *
+*Docker Vs Kubernetes*
 
 # Docker:
 - Container Platform where it supports the building the containers
