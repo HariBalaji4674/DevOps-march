@@ -21,7 +21,7 @@
 **1: Why Should we hire You ?**
 - 1: Your decision to hire me would provide me an excellent platform for showcasing my skills. I am Commited to acheiving a set of goals promptly
 
-- 2: My Hands-On Experience on the skills required for the open position in the company and coupled with continuous learning and I am confident in my ability to quickly grasp new concepts and technologies. I am also a collaborative team player who thrives in environments where I can contribute my ideas and work closely with others to achieve Company goals. Which makes me a great asset to the team and organization
+- 2: My Hands-On Experience on the skills required for the open position in the company and coupled with continuous self learning and I am confident in my ability to quickly grasp new concepts and technologies. I am also a collaborative team player who thrives in environments where I can contribute my ideas and work closely with others to achieve Company goals. Which makes me a great asset to the team and organization
 
 **2: What is your Strengths ?**
 - My Strength lies in swiftly acquiring new concepts and collaborating seamlessly within a team
@@ -31,14 +31,14 @@
 
 **4: Why are leaving your current Job ?**
 
-- 1: I feel that i am ready to take a new challenges & responsibilities to expand my skillset which aligns with my career goals and also to develop professionally
+- 1: I spent almost 3 years in my cureent organization and now I feel that i am ready to take a new challenges & responsibilities to expand my skillset which aligns with my career goals and also to develop professionally
 - 2: I strongly believe that change in work environment will increase my creativity and drive for success that why when i seen a job posting i would like to apply here.
 
 **5: Where do you see yourself in 5 years ?**
 - 1: I envision myself occupying senior role overseeing critical projects within this company is my outlook for the next five years.
 
 **6: Who all are there in your family?**
-- we are a nuclear family with four members dad is a Farmer mother is a home maker elder brother works in IT and me.
+- we are a nuclear family with four members dad is a Farmer, mother is a home maker, elder brother is an  it professional and me.
 
 **7: What is your current CTC ?**
 - My current CTC is 4.15 LPA which includes Bonus,other Benefits. However i have upskilled myself by doing various trainings,courses and certifications which has improved my profile i am expecting a hike of Minimum 100% on my curreny CTC.
@@ -47,11 +47,25 @@
 - Yes I do Applying For new Jobs
 
 **9: Do you have offer in hand?**
-
 - Yes i do have offer in hand but the reason i am interviewing here is because i want to explore what's best for me. i want to work with the company where my skills and experience will be utilized correctly . After reading the job description for this company i was really excited as i have the right skill set that will help me to meet the company needs.
 
 **10: How do handle pressure?**
 - i Understand that  deadlines and Compliacted projects can be stressfull it is part of every job role . i have trained myself to handle such situations. I always prefer chalk out a plan based on the priorities so that i do not cross any deadlines and avoid stressfull situations.
+
+**11: How to acknowledge i dont know answer?**
+- I am not familiar with that topic but i am always eager to expand my knowledge if this a critical aspect of this role. I would be more happy to learn and give you a informed response.
+
+**12: How to answer How are You?**
+- Thanks you for asking, I am doing well i am excited to be here today for this interview and to learn more about the oopurtunity. I hope you are having the good day as well.
+
+**13: How do you define success?**
+- Success to me is accomplising and achieve goals that are meaning to me
+
+**14: How do you Prioritize the Tasks?**
+- I will chalk out a plan and priotize the tasks based on the deadline,focusing on the most urgent/important tasks to be completed before the deadline.
+
+**Why do you want to work with This Particular Company?**
+- I have always drwan to the mission of this company and value that it stands for . I am Passionate about the helping the people and make a positive difference and i see this company is doing both.
 
 **9: Assuming that you are selected what will be your stratagy for next 60 Days?**
 
