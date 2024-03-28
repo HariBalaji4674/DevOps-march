@@ -21,27 +21,81 @@
 **1: Why Should we hire You ?**
 - 1: Your decision to hire me would provide me an excellent platform for showcasing my skills. I am Commited to acheiving a set of goals promptly
 
-- 2: My Hands-On Experience and coupled with continuous learning ,improvement and I am confident in my ability to quickly grasp new concepts and technologies. I am also a collaborative team player who thrives in environments where I can contribute my ideas and work closely with others to achieve common goals. Which makes me a great asset to the team and organization
+- 2: My Hands-On Experience on the skills required for the open position in the company and coupled with continuous learning and I am confident in my ability to quickly grasp new concepts and technologies. I am also a collaborative team player who thrives in environments where I can contribute my ideas and work closely with others to achieve Company goals. Which makes me a great asset to the team and organization
 
-**2: What is your Strength ?**
+**2: What is your Strengths ?**
 - My Strength lies in swiftly acquiring new concepts and collaborating seamlessly within a team
 
 **3: What is your Weakness ?**
 - I tend to channel my focus on a singular task at a time ensuring through concentration
 
 **4: Why are leaving your current Job ?**
-- 1: I felt that the position which i have been working is no longer providing me with chance to grow professionally so i though i require a new oppurtunity that would allow me to continue to devlop my skills and knowledge and also I believe that change in work environment will stimulate my creativity and drive for success that why when i seen a job posting here i would like to apply here.
 
-- 2: I feel that i am ready to take a new challenges & responsibilities to expand my skillset which aligns with my career goals and also to develop professionally.
+- 1: I feel that i am ready to take a new challenges & responsibilities to expand my skillset which aligns with my career goals and also to develop professionally
+- 2: I strongly believe that change in work environment will increase my creativity and drive for success that why when i seen a job posting i would like to apply here.
 
 **5: Where do you see yourself in 5 years ?**
 - 1: I envision myself occupying senior role overseeing critical projects within this company is my outlook for the next five years.
 
-**6: Who all are there in your family? **
-- we are a nuclear family with four members dad is a Farmer mother is a home maker elder brother works in it and me.
+**6: Who all are there in your family?**
+- we are a nuclear family with four members dad is a Farmer mother is a home maker elder brother works in IT and me.
 
 **7: What is your current CTC ?**
 - My current CTC is 4.15 LPA which includes Bonus,other Benefits. However i have upskilled myself by doing various trainings,courses and certifications which has improved my profile i am expecting a hike of Minimum 100% on my curreny CTC.
+
+**8: Are You applying for other jobs?**
+- Yes I do Applying For new Jobs
+
+**9: Do you have offer in hand?**
+
+- Yes i do have offer in hand but the reason i am interviewing here is because i want to explore what's best for me. i want to work with the company where my skills and experience will be utilized correctly . After reading the job description for this company i was really excited as i have the right skill set that will help me to meet the company needs.
+
+**10: How do handle pressure?**
+- i Understand that  deadlines and Compliacted projects can be stressfull it is part of every job role . i have trained myself to handle such situations. I always prefer chalk out a plan based on the priorities so that i do not cross any deadlines and avoid stressfull situations.
+
+**9: Assuming that you are selected what will be your stratagy for next 60 Days?**
+
+**10: How Would you improve upon our product/Company?**
+
+**11: Don't You think You are Overqualified For this position?**
+
+**12: Is there anyThing that you do not like about your last or current job?**
+
+**13: How long can you commit to work with us?**
+- 1: As long as i would be getting very good oppurtunities, challenging responsibilities i would stay
+
+**14: You Seem to be drawing a good salary will you be ok in taking a salary cut ?**
+
+**15: What do you do to improve your Knowledge?**
+
+**16: Can you perform under pressure?**
+
+**17: What irritates you about co-workers?**
+
+**18: Is there any particular kind of person you can not work with?**
+
+**19: What motivates you at work?**
+
+**20: Will you be happy to work in night shifts or over the weekends?**
+
+**21: Have you ever committed a mistake at work?**
+
+**22: What kind of a Salary are you looking for?**
+- 8,00,000 lakhs to 9,00,000
+
+**Can you work Independently?**
+
+**What is more important to you money or success?**
+
+**Do You have any Blind Spots?**
+
+**What makes you angry**
+
+**May I contact your present employer for reference**
+
+**What was the tougest decision you ever had to make?**
+
+
 
 
 
