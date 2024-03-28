@@ -29,7 +29,7 @@
 - My Strength lies in swiftly acquiring new concepts and collaborating seamlessly within a team to achieve the company goals witin the deadlines.
 
 **3: What is your Weakness ?**
-- Rather Calling it as Weakness I will call it as passive Strength that I tend to channel my focus on a singular task at a time ensuring through concentration
+- Rather Calling it as Weakness I will call it as Passive Strength that I tend to channel my focus on a singular task at a time ensuring through concentration
 
 **4: Why are leaving your current Job ?**
 
