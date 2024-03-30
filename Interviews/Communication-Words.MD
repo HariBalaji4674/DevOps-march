@@ -4,4 +4,8 @@
 - Obsolete: (adjective) No longer in use or fashion.
 - Yelled: (verb) Shouted loudly. Past tense of "yell".
 - Inherently: (adverb) By its very nature; essentially.
--
+- Viciousness:
+- ExtraVagantly:
+- Sanctuary
+- Monarch Habitat
+- 

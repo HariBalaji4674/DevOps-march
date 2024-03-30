@@ -1,22 +1,30 @@
 ## Questions to ask to HR
-
+- 0: Based on my experience and qualifications, what is the typical compensation range for this role?
 - 1: What is the average hike per annum in the organization?
 - 2: Is there a joining bonus ?
-- 3: Will I be included in the current salary appraisal/ What is the appraisal Cycle for this organization?
+- 3: Will I be included in the current salary appraisal / What is the appraisal Cycle for this organization?
 - 4: How does the company reward the top performer/ extra effort?
-- 5: Do they offer medical insurance for dependents?
-- 6: what kind of project will you be working on? (is it something that will challenge/ help me grow)
+- 5: will Our Organization offer medical insurance for us and our dependents?
+- 6: what kind of project will you be working on? (is it something that will challenge/ help me grow)?
+- 7: When Can i Expect The offer letter to be released.
+
+**7: What is your current CTC ?**
+- My current CTC is 4.15 LPA which includes Bonus,other Benefits. However i have upskilled myself by doing various trainings,courses and certifications which has improved my profile i am expecting a hike of Minimum 100% on my curreny CTC.
+
+- During My Tenure in TCS i have upskilled myself by doing various trainings,courses and certifications which has improved my profile i am expecting a hike Range from 9,00,00 to 10,00,000
 
 ## What Question Can we ask after the interview:
 
-- 1: What Oppurtunities are there for professional developement and growth within the company or within the position
+- 1: What Oppurtunities are there for professional developement and growth within the company or within the position.
 - 2: Can you tell me more about the team i wolud be a working with?.
-- 3: What are the next steps of the process and when can i expect to hear from you
+- 3: What are the next steps of the process and when can i expect to hear from you.
 - 4: How do you measure success in this position.
 - 5: Can you tell me the typical day look like in this role.
 - 6: What are your expectations from a new hire for this position.
 
 ## HR Questions To Us and Answers
+**When did you resigned to the company?**
+- My Resigned Date 11-Jan-2024 and My Last Working day will be 09-04-2024 .
 
 **1: Why Should we hire You ?**
 - 1: Your decision to hire me would provide me an excellent platform for showcasing my skills. I am Commited to acheiving a set of goals promptly
@@ -37,7 +45,7 @@
 
 - 1: I spent almost 3 years in my current organization and now I feel that i am ready to take a new challenges & responsibilities to expand my skillset which aligns with my career goals and also to develop professionally
 
-- 2: I strongly believe that change in work environment will increase my creativity as well as productivity and drive for success that why when i seen a job posting i would like to apply here.
+- 2: I strongly believe that change in work environment will increase my creativity as well as productivity that drive for success that's why when i seen a job posting i would like to apply here.
 
 **5: Where do you see yourself in 5 years ?**
 - 1: I envision myself occupying senior role overseeing critical projects within this company is my outlook for the next five years.
@@ -54,8 +62,8 @@
 **9: Do you have offer in hand?**
 - Yes i do have offer in hand but the reason i am interviewing here is because i want to explore what's best for me. i want to work with the company where my skills and experience will be utilized correctly by provides me a challenging roles and responsibilities . After reading the job description for this company i was really excited as i have the right skill set that will help me to meet the company needs.
 
-**10: How do handle pressure? or Can you perform under pressure?****
-- i Understand that  deadlines and Complicated projects can be stressfull it is part of every job role . i have trained myself to handle such situations. I always prefer chalk out a plan based on the priorities so that i do not cross any deadlines and avoid stressfull situations.
+**10: How do handle pressure? or Can you perform under pressure?**
+- I Understand that  deadlines and Complicated projects can be stressfull it is part of every job role . i have trained myself to handle such situations. I always prefer chalk out a plan based on the priorities so that i do not cross any deadlines and avoid stressfull situations.
 
 **11: How to acknowledge i dont know answer?**
 - I am not familiar with that topic but i am always eager to expand my knowledge if this a critical aspect of this role. I would be more happy to learn and give you an appropriate response.
@@ -75,7 +83,7 @@
 **9: Assuming that you are selected what will be your stratagy for next 60 Days?**
 - For the next 60 Days i would like to know about the team and the application and technologies using and i will try to complete some kind of cetifiactions which gives confidence to explain anything on the meeting. i would like to know about the environment.
 
-- mostly the job descriptions suits me well if there are more in this particular position i will fill that gap by doing some courses and connecting with superiors.
+- Mostly the job descriptions suits me well if there are more in this particular position i will fill that gap by doing some courses and connecting with superiors.
 
 **10: How Would you improve upon our product/Company?**
 
@@ -102,7 +110,7 @@
 **21: Have you ever committed a mistake at work?**
 
 **22: What kind of a Salary are you looking for?**
-- 8,00,000 lakhs to 9,00,000
+- 8,00,000 lakhs to 9,00,000 Lakhs
 
 **Can you work Independently?**
 

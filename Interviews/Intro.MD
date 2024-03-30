@@ -5,12 +5,12 @@
 - 1: Hi Good Morning
 - 2: Thanks you for giving me this oppurtunity to introduce about myself
 - 3: I have 2+ years of exeprince as a DevOps engineer at tata consultancy services joined in June-2021
-- 4: I have been working for an e commerce application where it has tech stack as Java,Python,Java-Script,Go Lang and using several DevOps Tools Like GitHub for Source Code management,Terraform for infra provisioning docker and kubernetes for containerization, And using cloud as AWS etcc.. Deploying the application in kubernetes .
+- 4: I have been working for an e-commerce application it is a following a micro-service architecture it is a uk based client where it has tech stack as Java,Python,Java-Script,Go Lang and using several DevOps Tools Like GitHub for Source Code management,Terraform for infra provisioning docker and kubernetes for containerization, And using cloud as AWS etcc.. Deploying the application in kubernetes .
 - 5: I am currently at banglore location for my work responsibilities but my native place is AndhraPradesh
-- 6: we are a 4 members family dad mom mybrother
+- 6: we are a 4 members family Father is a Farmer, Mother is a Home-Maker, and Mybrother is an IT Professional.
 
 **My Roles and responsibilites are more involved in Terraform infra creation and ci-cd part
-I am more intrested towards the Kubernetes and willing to work on kubernetes part as i have been requesting my managers to give me the oppurtunity to utilize my skills improve i didnt get a chance to work on the above hence i am looking for a new oppurtunity
+I am more intrested towards the Kubernetes and willing to work on kubernetes part as i have been requesting my managers to give me the oppurtunity to utilize my skills improve i didnt get a chance to work on the above hence i am looking for a new oppurtunity.
 
 **Describe about Your Project:**
 - 1: It is an E-Commerce Application
