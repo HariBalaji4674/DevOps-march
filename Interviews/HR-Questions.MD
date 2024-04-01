@@ -8,10 +8,6 @@
 - 6: what kind of project will you be working on? (is it something that will challenge/ help me grow)?
 - 7: When Can i Expect The offer letter to be released.
 
-**Another Offer High salary than this**
-- Thank you very much for the offer, I am excited about this opportunity with the blue yonder i have received another offer with [7.5 lpa ] and and it is remote job.
-- However i am excited to join the team here and believe this position is an ideal fit . so i am hopeful we can find a way to close this gap.
-
 **4 Things Negotiate Other Than offer**
 - Sign-On-Bonus `To match Our salary expectations and need to pay with in 12 months`
 - Relocation Expenses
@@ -28,6 +24,10 @@
 - Before i accept i would like to discuss the salary and compensation package its well below what i consider to be the market value for this role and my skills and experience
 - I am confident that my skills and hands on exeperience related to this role will contribute to be company success
 - Based on my reasearch of similar positions in the industry and my experience i believe a salary range of 8 lakhs to 10 lakhs would be fair and appropriate.
+
+**Another Offer High salary than this**
+- Thank you very much for the offer, I am excited about this opportunity with the blue yonder i have received another offer with [7.5 lpa ] and and it is remote job.
+- However i am excited to join the team here and believe this position is an ideal fit . so i am hopeful we can find a way to close this gap.
 
 **7: What is your current CTC ?**
 - My current CTC is 4.15 LPA which includes Bonus,other Benefits. However i have upskilled myself by doing various trainings,courses and certifications which has improved my profile i am expecting a hike of Minimum 100% on my curreny CTC.
