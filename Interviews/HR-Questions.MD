@@ -1,17 +1,17 @@
 ## Questions to ask to HR
-- 0: Based on my experience and qualifications, what is the typical compensation range for this role?
+- 0: Based on my experience and qualifications, what is the typical compensation range for this role in Blue Yonder?
 - 1: What is the average hike per annum in the organization?
 - 2: Is there a joining bonus ?
 - 3: Will I be included in the current salary appraisal / What is the appraisal Cycle for this organization?
 - 4: How does the company reward the top performer/ extra effort?
-- 5: will Our Organization offer medical insurance for us and our dependents?
-- 6: what kind of project will you be working on? (is it something that will challenge/ help me grow)?
+- 5: Will Our Organization offer medical insurance for us and our dependents?
+- 6: What kind of project will you be working on? (is it something that will challenge/ help me grow)?
 - 7: When Can i Expect The offer letter to be released.
 
 **4 Things Negotiate Other Than offer**
 - Sign-On-Bonus `To match Our salary expectations and need to pay with in 12 months`
 - Relocation Expenses
-- Early Salary Review `if the expectations would not match now can we have a discussion again after  6 months from now`
+- Early Salary Review `if the expectations would not match now can we have a discussion again after 6 months from now`
 - Leaves `Paid Leaves`
 
 **4 Steps To Negotaiate**
@@ -22,12 +22,15 @@
 
 - Thanks you for the offer i am excited about the role and joining the company
 - Before i accept i would like to discuss the salary and compensation package its well below what i consider to be the market value for this role and my skills and experience
-- I am confident that my skills and hands on exeperience related to this role will contribute to be company success
+- I am confident that my skills and hands on exeperience related to this role will contribute to the company success
 - Based on my reasearch of similar positions in the industry and my experience i believe a salary range of 8 lakhs to 10 lakhs would be fair and appropriate.
 
 **Another Offer High salary than this**
-- Thank you very much for the offer, I am excited about this opportunity with the blue yonder i have received another offer with [7.5 lpa ] and and it is remote job.
+- Thank you very much for the offer, I am excited about this opportunity with the blue yonder i have received another offer with [7.5 lpa ].
 - However i am excited to join the team here and believe this position is an ideal fit . so i am hopeful we can find a way to close this gap.
+
+**9: Do you have offer in hand?**
+- Yes i do have offer in hand but the reason i am interviewing here is because i want to explore what's best for me. i want to work with the company where my skills and experience will be utilized correctly by providing me a challenging roles and responsibilities . After reading the job description for this company i was really excited as i have the right skill set that will help me to meet the company needs.
 
 **7: What is your current CTC ?**
 - My current CTC is 4.15 LPA which includes Bonus,other Benefits. However i have upskilled myself by doing various trainings,courses and certifications which has improved my profile i am expecting a hike of Minimum 100% on my curreny CTC.
