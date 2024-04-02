@@ -81,7 +81,7 @@
 - Yes I do Applying For new Jobs
 
 **9: Do you have offer in hand?**
-- Yes i do have offer in hand but the reason i am interviewing here is because i want to explore what's best for me. i want to work with the company where my skills and experience will be utilized correctly by provides me a challenging roles and responsibilities . After reading the job description for this company i was really excited as i have the right skill set that will help me to meet the company needs.
+- Yes i do have offer in hand but the reason i am interviewing here is because i want to explore what's best for me. i want to work with the company where my skills and experience will be utilized correctly by providing me a challenging roles and responsibilities . After reading the job description for this company i was really excited as i have the right skill set that will help me to meet the company needs.
 
 **10: How do handle pressure? or Can you perform under pressure?**
 - I Understand that  deadlines and Complicated projects can be stressfull it is part of every job role . i have trained myself to handle such situations. I always prefer chalk out a plan based on the priorities so that i do not cross any deadlines and avoid stressfull situations.

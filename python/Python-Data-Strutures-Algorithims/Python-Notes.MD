@@ -1,5 +1,9 @@
 ## Python DSA Notes
 
+**What is DSA:**
+- Data Structures : Study of methods for storing and organizing the data in a formal structure is called Data Structuring
+- Algorithims: When we use some sequence of steps to organize and storing the data is called Algorithims
+
 ## What is Time Complexity:
 
 
