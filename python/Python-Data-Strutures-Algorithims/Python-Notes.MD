@@ -74,3 +74,12 @@ for i in range(10):
   for j in range(i):
     print(i,end=" ")
 ```
+
+##### Day-01
+**Greatest Common Divisors**
+```
+def gcd(a,b):
+    if a == 0:
+      return b
+    return gcd(b%a,a)
+```

@@ -23,7 +23,7 @@
 - Thanks you for the offer i am excited about the role and joining the company
 - Before i accept i would like to discuss the salary and compensation package its well below what i consider to be the market value for this role and my skills and experience
 - I am confident that my skills and hands on exeperience related to this role will contribute to the company success
-- Based on my reasearch of similar positions in the industry and my experience i believe a salary range of 8 lakhs to 10 lakhs would be fair and appropriate.
+- Based on my research of similar positions in the industry and my experience i believe a salary range of 8 lakhs to 10 lakhs would be fair and appropriate.
 
 **Another Offer High salary than this**
 - Thank you very much for the offer, I am excited about this opportunity with the blue yonder i have received another offer with [7.5 lpa ].
