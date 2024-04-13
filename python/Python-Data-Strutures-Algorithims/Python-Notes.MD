@@ -60,6 +60,8 @@
     - Data Base Management
 
 ## What is Time Complexity:
+*- A function that gives the relationship about time taken as the input grows.*
+
 
 
 ### Asymptotic Analysis

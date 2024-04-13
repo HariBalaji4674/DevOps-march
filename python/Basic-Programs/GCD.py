@@ -13,3 +13,10 @@ def gcd(a,b):
   return gcd(b%a,a)
 
 print(gcd(60,36))
+
+def gcd(a,b):
+  if a == 0:
+    return b
+  return gcd(b%a,a)
+
+print(gcd(60,36))
