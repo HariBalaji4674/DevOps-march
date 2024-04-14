@@ -10,6 +10,7 @@
   - Deletion
   - Updation
   - Accessing
+
 - *Types of Data Strucures :*
   - Arrays
   - LinkedList
