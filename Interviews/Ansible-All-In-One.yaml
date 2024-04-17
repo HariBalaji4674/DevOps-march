@@ -7,6 +7,8 @@ Play:
 Playbook:
 Role:
 
+Agent Actions with due Deligence
+
 Explain scenario when to use either ansible playbook or AD-HOC Commands:
 1: When we are doing immediate tasks of one or two tasks we will go with adhoc cli commands
 ping commands,quick & easy, rebooting server,Managing files, Managing packages etc..
