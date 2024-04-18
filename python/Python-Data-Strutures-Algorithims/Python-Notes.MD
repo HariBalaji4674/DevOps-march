@@ -63,13 +63,15 @@
 ## What is Time Complexity:
 *- A function that gives the relationship about time taken as the input grows.*
 
-
-
 ### Asymptotic Analysis
 - No dependency in machine,programming language,CPU Cycles etc..
 - We Do not have to implement all the ideas/algorithims
 - Asymptotic Analysis is measusing the order of growth in the form of input sizes.
 - Analysis of algorithms is the determination of the amount of time and space resources required to execute it.
+
+## What is Space Complexity
+- Extra space required or taken of an algorithim is taking
+- 
 
 ***Reverse String***
 ```
