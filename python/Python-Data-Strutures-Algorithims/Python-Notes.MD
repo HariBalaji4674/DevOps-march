@@ -86,3 +86,18 @@ def gcd(a,b):
       return b
     return gcd(b%a,a)
 ```
+
+### Big O Notation
+1: What is meant by Big O notation
+- The upper bound of the complexity of the program should not exceed the O(N^3)
+### Big Omega Notation
+1: What is Big Omega Notation
+- It will require minimum n3 as lower bound for a program
+### Theta Notation
+1: What is theta notation
+- Combining The both Omega and Big O Notations
+
+Little Notation
+
+Little Omega notation
+- Loosely Bound of O(N^3) 
