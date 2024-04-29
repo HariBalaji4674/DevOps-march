@@ -8,8 +8,7 @@ High Level System Designs are:
 - 1: Large Scale Distributed Systems
 - 2: Complex Designs
 
-
-**Large Scale Distributed Systems** 
+#### Large Scale Distributed Systems
 - It means it is widely used all over the world
 - in terms of services and in terms of data used and stored
 
